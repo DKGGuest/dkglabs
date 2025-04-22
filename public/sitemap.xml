@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+        <loc>https://www.dkglabs.com/</loc>
+        <lastmod>2025-01-19T09:00:33+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://www.dkglabs.com/#features</loc>
+        <lastmod>2025-01-19T09:00:33+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://www.dkglabs.com/#pricing</loc>
+        <lastmod>2025-01-19T09:00:33+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://www.dkglabs.com/#roadmap</loc>
+        <lastmod>2025-01-19T09:00:33+00:00</lastmod>
+    </url>
+    <url>
+        <loc>https://www.dkglabs.com/#contact</loc>
+        <lastmod>2025-01-19T09:00:33+00:00</lastmod>
+    </url>
+</urlset>
+

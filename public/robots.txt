@@ -1,0 +1,15 @@
+# robots.txt file for DKG Labs
+
+# All web crawlers are allowed the following sections of the site
+User-agent: *
+Allow: /#features
+Allow: /#pricing
+Allow: /#roadmap
+Allow: /#contact
+
+# Disallow access to the cgi-bin directory
+Disallow: /cgi-bin/
+
+# Specify the locations of the sitemaps
+Sitemap: https://www.dkglabs.com/sitemap.xml
+
