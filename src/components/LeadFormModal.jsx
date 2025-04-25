@@ -10,6 +10,7 @@ const LeadFormModal = ({ isOpen, onClose }) => {
     });
 
     const [loading, setLoading] = useState(false);
+    const [result, setResult] = useState("");
 
     if (!isOpen) return null;
 
@@ -24,32 +25,43 @@ const LeadFormModal = ({ isOpen, onClose }) => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true);
+        setResult("Sending...");
+
         try {
-            const response = await fetch("http://localhost:8080/send-email", {
+            const form = new FormData();
+            form.append("access_key", "061dbcd5-2672-4821-a747-820c72257632"); // Replace with your Web3Forms key
+            form.append("name", formData.name);
+            form.append("email", formData.email);
+            form.append("mobile", formData.mobile);
+            form.append("organisation", formData.organisation);
+            form.append("query", formData.query);
+
+            // ✅ Add custom subject here
+            form.append("subject", `Free Consultation Request from ${formData.name}`);
+
+            const response = await fetch("https://api.web3forms.com/submit", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
+                body: form,
             });
 
             const data = await response.json();
-            console.log("Response from server:", data);
-            alert("Query sent successfully!");
-
-            // Reset form
-            setFormData({
-                name: "",
-                email: "",
-                mobile: "",
-                organisation: "",
-                query: "",
-            });
-
-            onClose();
+            if (data.success) {
+                setResult("Form submitted successfully!");
+                setFormData({
+                    name: "",
+                    email: "",
+                    mobile: "",
+                    organisation: "",
+                    query: "",
+                });
+                onClose();
+            } else {
+                console.error("Error", data);
+                setResult("Something went wrong. Please try again.");
+            }
         } catch (error) {
             console.error("Error:", error);
-            alert("Something went wrong. Please try again.");
+            setResult("Something went wrong. Please try again.");
         } finally {
             setLoading(false);
         }
@@ -124,6 +136,7 @@ const LeadFormModal = ({ isOpen, onClose }) => {
                             required
                         ></textarea>
                     </div>
+                    <div className="text-sm text-green-400 mb-4">{result}</div>
                     <div className="flex justify-end">
                         <button
                             type="button"
@@ -176,3 +189,4 @@ const LeadFormModal = ({ isOpen, onClose }) => {
 };
 
 export default LeadFormModal;
+

@@ -33,12 +33,12 @@ const AuthPage = () => {
     }
   }, []);
 
-  const handleChange = async (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleResetChange = async (e) => {
-    setResetData({ ...resetData, [e.target.name]: e.target.value });
+  const handleResetChange = (e) => {
+    setResetData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
   const handleSubmit = async (e) => {
@@ -48,6 +48,7 @@ const AuthPage = () => {
     let users = JSON.parse(localStorage.getItem("users")) || {};
 
     if (!isLogin) {
+      // Sign-up flow
       if (users[formData.emailOrMobile] || users[formData.mobile]) {
         alert("User already exists. Try logging in.");
         setIsLogin(true);
@@ -60,8 +61,12 @@ const AuthPage = () => {
 
       const newUser = {
         name: formData.name,
-        email: formData.emailOrMobile.includes("@") ? formData.emailOrMobile : "",
-        mobile: formData.emailOrMobile.includes("@") ? formData.mobile : formData.emailOrMobile,
+        email: formData.emailOrMobile.includes("@")
+          ? formData.emailOrMobile
+          : "",
+        mobile: formData.emailOrMobile.includes("@")
+          ? formData.mobile
+          : formData.emailOrMobile,
         password: hashedPassword,
         organisation: formData.organisation,
       };
@@ -75,11 +80,12 @@ const AuthPage = () => {
       localStorage.setItem("currentUser", JSON.stringify(newUser));
       window.dispatchEvent(new Event("storage"));
 
-      alert("Sign-up successful! Redirecting to home...");
+      alert("Sign-up successful! Redirecting to home…");
       navigate("/");
 
       await notifyCompany(newUser, "New Sign-Up");
     } else {
+      // Sign-in flow
       const storedUser = users[formData.emailOrMobile];
 
       if (!storedUser) {
@@ -88,7 +94,10 @@ const AuthPage = () => {
         return;
       }
 
-      const isMatch = await bcrypt.compare(formData.password, storedUser.password);
+      const isMatch = await bcrypt.compare(
+        formData.password,
+        storedUser.password
+      );
 
       if (isMatch) {
         localStorage.setItem("authStatus", "loggedIn");
@@ -96,7 +105,7 @@ const AuthPage = () => {
         localStorage.setItem("currentUser", JSON.stringify(storedUser));
         window.dispatchEvent(new Event("storage"));
 
-        alert("Sign-in successful! Redirecting to home...");
+        alert("Sign-in successful! Redirecting to home…");
         navigate("/");
       } else {
         alert("Incorrect password. Please try again.");
@@ -132,38 +141,51 @@ const AuthPage = () => {
     setResetData({ emailOrMobile: "", newPassword: "" });
 
     await notifyCompany(user, "Password Reset");
-
     setLoading(false);
   };
 
+  // --- Web3Forms notification instead of local backend ---
   const notifyCompany = async (user, subject) => {
     try {
-      const response = await fetch("http://localhost:8080/send-email", {
+      const payload = new FormData();
+      payload.append("access_key", "061dbcd5-2672-4821-a747-820c72257632");
+      payload.append("subject", subject);
+      payload.append("from_name", user.name);
+      payload.append("email", user.email || "noemail@example.com");
+      payload.append(
+        "message",
+        `Organisation: ${user.organisation}\nMobile: ${
+          user.mobile || "N/A"
+        }\n(Note: password is hidden)`
+      );
+
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: user.name,
-          email: user.email,
-          password: "********",
-          organisation: user.organisation,
-          subject: subject,
-        }),
+        body: payload,
       });
-      const data = await response.json();
-      console.log("Email sent response:", data);
+
+      const result = await res.json();
+      if (result.success) {
+        console.log("Notification sent via Web3Forms");
+      } else {
+        console.error("Web3Forms error:", result);
+      }
     } catch (err) {
-      console.error("Failed to send email:", err);
+      console.error("Failed to send via Web3Forms:", err);
     }
   };
+  // ------------------------------------------------------------
 
   return (
     <div className="flex h-screen">
       <div className="w-full sm:w-1/2 flex justify-center items-center bg-[#0f172a]">
-        <div className="bg-[#1e293b] p-8 rounded-lg shadow-lg w-96 text-white animate__animated animate__fadeIn animate__duration-350">
+        <div className="bg-[#1e293b] p-8 rounded-lg shadow-lg w-96 text-white animate_animated animatefadeIn animate_duration-350">
           <h2 className="text-2xl font-semibold text-center mb-4">
-            {isReset ? "Reset Password" : isLogin ? "Sign In" : "Sign Up"}
+            {isReset
+              ? "Reset Password"
+              : isLogin
+              ? "Sign In"
+              : "Sign Up"}
           </h2>
 
           {!isReset ? (
@@ -171,7 +193,9 @@ const AuthPage = () => {
               {!isLogin && (
                 <>
                   <div className="mb-4">
-                    <label className="block text-gray-300">Full Name</label>
+                    <label className="block text-gray-300">
+                      Full Name
+                    </label>
                     <input
                       type="text"
                       name="name"
@@ -182,7 +206,9 @@ const AuthPage = () => {
                     />
                   </div>
                   <div className="mb-4">
-                    <label className="block text-gray-300">Organisation</label>
+                    <label className="block text-gray-300">
+                      Organisation
+                    </label>
                     <input
                       type="text"
                       name="organisation"
@@ -194,8 +220,13 @@ const AuthPage = () => {
                   </div>
                 </>
               )}
+
               <div className="mb-4">
-                <label className="block text-gray-300">{isLogin ? "Email or Mobile" : "Email"}</label>
+                <label className="block text-gray-300">
+                  {isLogin
+                    ? "Email or Mobile"
+                    : "Email"}
+                </label>
                 <input
                   type="text"
                   name="emailOrMobile"
@@ -208,7 +239,9 @@ const AuthPage = () => {
 
               {!isLogin && (
                 <div className="mb-4">
-                  <label className="block text-gray-300">Mobile (Optional)</label>
+                  <label className="block text-gray-300">
+                    Mobile (Optional)
+                  </label>
                   <input
                     type="text"
                     name="mobile"
@@ -220,7 +253,9 @@ const AuthPage = () => {
               )}
 
               <div className="mb-4">
-                <label className="block text-gray-300">Password</label>
+                <label className="block text-gray-300">
+                  Password
+                </label>
                 <div className="relative">
                   <input
                     type={showPassword ? "text" : "password"}
@@ -235,20 +270,33 @@ const AuthPage = () => {
                     className="absolute inset-y-0 right-3 flex items-center text-gray-400"
                     onClick={() => setShowPassword(!showPassword)}
                   >
-                    <i className={`fas ${showPassword ? "fa-eye-slash" : "fa-eye"} text-lg`} />
+                    <i
+                      className={`fas ${
+                        showPassword ? "fa-eye-slash" : "fa-eye"
+                      } text-lg`}
+                    />
                   </button>
                 </div>
               </div>
 
-              <button type="submit" className="w-full bg-[#2563eb] text-white py-2 rounded-lg hover:bg-[#1d4ed8]">
-                {loading ? "Processing..." : isLogin ? "Sign In" : "Sign Up"}
+              <button
+                type="submit"
+                className="w-full bg-[#2563eb] text-white py-2 rounded-lg hover:bg-[#1d4ed8]"
+              >
+                {loading
+                  ? "Processing..."
+                  : isLogin
+                  ? "Sign In"
+                  : "Sign Up"}
               </button>
             </form>
           ) : (
             <form onSubmit={handleResetSubmit}>
               {resetStep === 1 ? (
                 <>
-                  <label className="block text-gray-300 mb-2">Enter your Email or Mobile</label>
+                  <label className="block text-gray-300 mb-2">
+                    Enter your Email or Mobile
+                  </label>
                   <input
                     type="text"
                     name="emailOrMobile"
@@ -267,7 +315,9 @@ const AuthPage = () => {
                 </>
               ) : (
                 <>
-                  <label className="block text-gray-300 mb-2">Enter New Password</label>
+                  <label className="block text-gray-300 mb-2">
+                    Enter New Password
+                  </label>
                   <div className="relative">
                     <input
                       type={showPassword ? "text" : "password"}
@@ -282,11 +332,18 @@ const AuthPage = () => {
                       className="absolute inset-y-0 right-3 flex items-center text-gray-400"
                       onClick={() => setShowPassword(!showPassword)}
                     >
-                      <i className={`fas ${showPassword ? "fa-eye-slash" : "fa-eye"} text-lg`} />
+                      <i
+                        className={`fas ${
+                          showPassword ? "fa-eye-slash" : "fa-eye"
+                        } text-lg`}
+                      />
                     </button>
                   </div>
 
-                  <button type="submit" className="w-full bg-green-600 py-2 rounded">
+                  <button
+                    type="submit"
+                    className="w-full bg-green-600 py-2 rounded"
+                  >
                     Reset Password
                   </button>
                 </>
@@ -296,7 +353,10 @@ const AuthPage = () => {
 
           {!isReset && isLogin && (
             <p className="text-center mt-4 text-sm">
-              <button onClick={() => setIsReset(true)} className="text-blue-400 hover:underline">
+              <button
+                onClick={() => setIsReset(true)}
+                className="text-blue-400 hover:underline"
+              >
                 Forgot Password?
               </button>
             </p>
@@ -304,7 +364,13 @@ const AuthPage = () => {
 
           {isReset && (
             <p className="text-center mt-4 text-sm">
-              <button onClick={() => { setIsReset(false); setResetStep(1); }} className="text-blue-400 hover:underline">
+              <button
+                onClick={() => {
+                  setIsReset(false);
+                  setResetStep(1);
+                }}
+                className="text-blue-400 hover:underline"
+              >
                 Back to Login
               </button>
             </p>
@@ -312,25 +378,35 @@ const AuthPage = () => {
 
           {!isReset && (
             <p className="text-center mt-4 text-gray-400">
-              {isLogin ? "Don't have an account?" : "Already have an account?"}
-              <button onClick={() => setIsLogin(!isLogin)} className="text-blue-400 hover:underline ml-1">
+              {isLogin
+                ? "Don't have an account?"
+                : "Already have an account?"}
+              <button
+                onClick={() => setIsLogin(!isLogin)}
+                className="text-blue-400 hover:underline ml-1"
+              >
                 {isLogin ? "Sign Up" : "Sign In"}
               </button>
             </p>
           )}
 
           <p className="text-center mt-4">
-            <Link to="/" className="text-gray-400 hover:underline">Back to Home</Link>
+            <Link
+              to="/"
+              className="text-gray-400 hover:underline"
+            >
+              Back to Home
+            </Link>
           </p>
         </div>
       </div>
 
       <div
-        className="w-1/2 bg-cover bg-center hidden sm:block animate__animated animate__fadeInRight animate__duration-400"
-        style={{
-          backgroundImage: `url(${robotImage})`,
-        }}
-      />
+  className="w-1/2 bg-cover bg-center hidden sm:block animate_animated animatefadeInRight animate_duration-400"
+  style={{
+    backgroundImage: `url(${robotImage})`,
+  }}
+/>
     </div>
   );
 };
