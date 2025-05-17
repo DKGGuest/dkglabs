@@ -147,33 +147,50 @@ const AuthPage = () => {
   // --- Web3Forms notification instead of local backend ---
   const notifyCompany = async (user, subject) => {
     try {
-      const payload = new FormData();
-      payload.append("access_key", "061dbcd5-2672-4821-a747-820c72257632");
-      payload.append("subject", subject);
-      payload.append("from_name", user.name);
-      payload.append("email", user.email || "noemail@example.com");
-      payload.append(
-        "message",
-        `Organisation: ${user.organisation}\nMobile: ${
-          user.mobile || "N/A"
-        }\n(Note: password is hidden)`
-      );
-
-      const res = await fetch("https://api.web3forms.com/submit", {
+      const formData = new FormData();
+      formData.append("access_key", "061dbcd5-2672-4821-a747-820c72257632"); // Replace with your Web3Forms key
+      formData.append("subject", subject);
+      formData.append("from_name", user.name);
+      formData.append("email", user.email || "noemail@example.com");
+      formData.append("message", `Organisation: ${user.organisation || "N/A"}\nMobile: ${user.mobile || "N/A"}\n(Note: password is hidden)`);
+  
+      // Send to Web3Forms
+      const web3formsResponse = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
-        body: payload,
+        body: formData,
       });
-
-      const result = await res.json();
-      if (result.success) {
-        console.log("Notification sent via Web3Forms");
+  
+      const web3formsData = await web3formsResponse.json();
+  
+      // Convert to plain object for Google Sheets
+      const jsonData = {
+        name: user.name,
+        email: user.email,
+        mobile: user.mobile,
+        organisation: user.organisation,
+        event: subject,
+      };
+  
+      // Send to Google Sheets
+      await fetch("https://script.google.com/macros/s/AKfycbylVQEWZNMkLJuwhSegK6saz1_ztoZQup0r4rMn7SFH_GObULW7V8kJD5fSDLwoHIuifQ/exec", {
+        method: "POST",
+        body: JSON.stringify(jsonData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors", // Avoids CORS errors (Google workaround)
+      });
+  
+      if (web3formsData.success) {
+        console.log("Notification sent successfully.");
       } else {
-        console.error("Web3Forms error:", result);
+        console.error("Web3Forms Error:", web3formsData);
       }
     } catch (err) {
-      console.error("Failed to send via Web3Forms:", err);
+      console.error("Notification failed:", err);
     }
   };
+  
   // ------------------------------------------------------------
 
   return (

@@ -55,7 +55,7 @@ const AIService = () => {
             </section>
 
             {/* AI Success Stories Section */}
-            <section className="max-w-7xl mx-auto py-4 px-4">
+<section className="max-w-7xl mx-auto py-4 px-4">
     <h2 className="text-4xl font-bold text-center text-green-400">AI Success Stories</h2>
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
         {caseStudies.map((caseStudy, index) => (
@@ -72,6 +72,12 @@ const AIService = () => {
                         <h3 className="text-2xl font-semibold mb-3 text-white">{caseStudy.title}</h3>
                         <p className="text-gray-400 mb-4">{caseStudy.description}</p>
                         
+                        {/* Explore More Button */}
+                        {/* <a href={caseStudy.pdf} download onClick={(e) => e.stopPropagation()}>
+                            <button className="mt-2 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition duration-200">
+                                Explore More
+                            </button>
+                        </a> */}
                     </CardContent>
                 </Card>
             </motion.div>
@@ -79,7 +85,7 @@ const AIService = () => {
     </div>
 </section>
 
-            {/* What Our Clients Say Section */}
+            {/* What Our Clients Say Section
             <section className="max-w-7xl mx-auto py-4 px-4">
                 <h2 className="text-4xl font-bold text-center text-yellow-400">What Our Clients Say</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
@@ -95,7 +101,7 @@ const AIService = () => {
                         </motion.div>
                     ))}
                 </div>
-            </section>
+            </section> */}
 
             {/* Modal for AI Success Stories */}
             {showModal && selectedCase && (
@@ -151,28 +157,29 @@ const caseStudies = [
         title: "AI-Powered Fraud Detection",
         description: "How our AI helped a bank reduce fraud losses by 40%.",
         details: "Implemented real-time fraud analytics using machine learning models trained on historical transaction data.",
+        pdf: "/pdfs/AI Projects and Case Studies.pdf"
        
     },
     {
         title: "Smart Manufacturing AI",
         description: "AI-driven defect detection improved production efficiency by 30%.",
         details: "Utilized deep learning for real-time visual inspections, reducing manual errors.",
-       
+        pdf: "/pdfs/AI Projects and Case Studies.pdf"
     }
 ];
 
-const testimonials = [
-    {
-        client: "John Doe",
-        company: "XYZ Bank",
-        feedback: "The AI-powered fraud detection system reduced our losses by 40%. Highly recommended!"
-    },
-    {
-        client: "Sarah Johnson",
-        company: "ABC Manufacturing",
-        feedback: "AI-driven defect detection increased our production efficiency by 30%. Excellent work!"
-    },
+// const testimonials = [
+//     {
+//         client: "John Doe",
+//         company: "XYZ Bank",
+//         feedback: "The AI-powered fraud detection system reduced our losses by 40%. Highly recommended!"
+//     },
+//     {
+//         client: "Sarah Johnson",
+//         company: "ABC Manufacturing",
+//         feedback: "AI-driven defect detection increased our production efficiency by 30%. Excellent work!"
+//     },
 
-];
+// ];
 
 export default AIService;
