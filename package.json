@@ -32,8 +32,9 @@
         "react-hot-toast": "^2.4.1",
         "react-just-parallax": "^3.1.16",
         "react-phone-number-input": "^3.4.8",
-        "react-router-dom": "^6.30.0",
-        "scroll-lock": "^2.1.5"
+        "react-router-dom": "^6.30.1",
+        "scroll-lock": "^2.1.5",
+        "startup-website": "file:"
     },
     "devDependencies": {
         "@types/react": "^18.2.55",

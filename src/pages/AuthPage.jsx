@@ -155,10 +155,10 @@ const AuthPage = () => {
       formData.append("message", `Organisation: ${user.organisation || "N/A"}\nMobile: ${user.mobile || "N/A"}\n(Note: password is hidden)`);
   
       // Send to Web3Forms
-      const web3formsResponse = await fetch("https://api.web3forms.com/submit", {
-        method: "POST",
-        body: formData,
-      });
+      // const web3formsResponse = await fetch("https://api.web3forms.com/submit", {
+      //   method: "POST",
+      //   body: formData,
+      // });
   
       const web3formsData = await web3formsResponse.json();
   
@@ -172,7 +172,7 @@ const AuthPage = () => {
       };
   
       // Send to Google Sheets
-      await fetch("https://script.google.com/macros/s/AKfycbylVQEWZNMkLJuwhSegK6saz1_ztoZQup0r4rMn7SFH_GObULW7V8kJD5fSDLwoHIuifQ/exec", {
+      await fetch("", {
         method: "POST",
         body: JSON.stringify(jsonData),
         headers: {
