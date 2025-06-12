@@ -155,10 +155,10 @@ const AuthPage = () => {
       formData.append("message", `Organisation: ${user.organisation || "N/A"}\nMobile: ${user.mobile || "N/A"}\n(Note: password is hidden)`);
   
       // Send to Web3Forms
-      // const web3formsResponse = await fetch("https://api.web3forms.com/submit", {
-      //   method: "POST",
-      //   body: formData,
-      // });
+      const web3formsResponse = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData,
+      });
   
       const web3formsData = await web3formsResponse.json();
   
