@@ -81,7 +81,7 @@ export default function Consulting() {
       <div className="relative bg-gradient-to-b from-gray-900 to-black px-6 py-14">
         {/* 🔙 Back Button */}
         <div className="fixed top-6 left-6 z-50">
-          <Link to="/abc">
+          <Link to="/">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

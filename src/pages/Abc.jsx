@@ -76,7 +76,7 @@ const abc = () => {
 
   {/* Navigation */}
   <nav className="space-x-4">
-    <Link to="/abc" className="font-serif hover:text-black transition-colors duration-300 rounded-xl m-2 p-1">
+    <Link to="/" className="font-serif hover:text-black transition-colors duration-300 rounded-xl m-2 p-1">
       Home
     </Link>
     <Link to="/About" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
@@ -88,7 +88,7 @@ const abc = () => {
     <Link to="/Consulting" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
       Consulting
     </Link>
-    <Link to="/" className="font-serif hover:text-black transition-colors duration-300 rounded-xl m-2 p-1">
+    <Link to="/Home" className="font-serif hover:text-black transition-colors duration-300 rounded-xl m-2 p-1">
       AI CoE
     </Link>
     <Link to="/Innovation" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
@@ -294,14 +294,14 @@ const abc = () => {
 
             {/* Back to Home Button */}
             {/* <div className="fixed top-6 left-6">
-                <Link to="/">
+                <Link to="/Home">
                     <button className="bg-gray-800 text-white px-3 py-1 rounded-md shadow-md text-sm hover:bg-gray-700">
                         Back to Main
                     </button>
                 </Link>  bg-gradient-to-r from-gray-900 to-gray-600
             </div> */}
             {/* <div className="fixed top-6 left-6 z-50">
-  <Link to="/">
+  <Link to="/Home">
     <motion.button
       whileHover={{ scale: 1.05 }}
       whileTap={{ scale: 0.95 }}

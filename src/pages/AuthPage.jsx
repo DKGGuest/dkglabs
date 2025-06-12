@@ -81,7 +81,7 @@ const AuthPage = () => {
       window.dispatchEvent(new Event("storage"));
 
       alert("Sign-up successful! Redirecting to home…");
-      navigate("/");
+      navigate("/Home");
 
       await notifyCompany(newUser, "New Sign-Up");
     } else {
@@ -106,7 +106,7 @@ const AuthPage = () => {
         window.dispatchEvent(new Event("storage"));
 
         alert("Sign-in successful! Redirecting to home…");
-        navigate("/");
+        navigate("/Home");
       } else {
         alert("Incorrect password. Please try again.");
       }
@@ -409,7 +409,7 @@ const AuthPage = () => {
 
           <p className="text-center mt-4">
             <Link
-              to="/"
+              to="/Home"
               className="text-gray-400 hover:underline"
             >
               Back to Home

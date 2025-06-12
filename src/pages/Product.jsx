@@ -87,7 +87,7 @@ export default function Product() {
 
       {/* 🔙 Fixed Back Button */}
       <div className="fixed top-6 left-6 z-50">
-        <Link to="/abc">
+        <Link to="/">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}

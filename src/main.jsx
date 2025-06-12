@@ -31,11 +31,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <BrowserRouter>
             <ScrollToTop />
             <Routes>
-                <Route path="/" element={<App />} />
+                <Route path="/Home" element={<App />} />
                 <Route path="/auth" element={<AuthPage />} />
                 <Route path="/ai-consulting" element={<AIService />} />
                 <Route path="/healthcareDetails" element={<Healthcare />} />
-                <Route path="/abc" element={<Abc />} />
+                <Route path="/" element={<Abc />} />
                 <Route path="/components/Contact" element={<Contact />} />
                 <Route path="/components/Contact2" element={<Contact2 />} />
                 <Route path="/products/:id" element={<ProductDetail />} />

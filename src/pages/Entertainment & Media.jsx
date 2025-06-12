@@ -237,7 +237,7 @@ function  EntertainmentAndMedia() {
         </div>
       ))}
       <div className="flex justify-center mt-12 md:mt-15 xl:mt-20">
-        <Link to="/">
+        <Link to="/Home">
             <Button>Go to Home</Button>
         </Link>
       </div>

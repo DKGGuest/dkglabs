@@ -57,7 +57,7 @@ const Contact2 = () => {
     <div className="relative bg-black text-white min-h-screen">
       {/* 🔙 Fixed Back Button */}
             <div className="fixed top-6 left-6 z-50">
-              <Link to="/abc">
+              <Link to="/">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}

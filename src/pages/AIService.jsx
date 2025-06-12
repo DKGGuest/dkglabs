@@ -121,7 +121,7 @@ const AIService = () => {
 
             {/* Back to Home Button */}
             <div className="fixed top-6 left-6">
-                <Link to="/">
+                <Link to="/Home">
                     <button className="bg-gray-800 text-white px-3 py-1 rounded-md shadow-md text-sm hover:bg-gray-700">
                         Back to Home
                     </button>
