@@ -13,7 +13,7 @@ const navigation = [
     {  id: "2", title: "AI as a Service", url: "/ai-consulting" },
     { id: "3", title: "Gen AI Solutions", url: "#roadmap" },
     { id: "4", title: "Contact", url: "#contact", onlyMobile: true },
-    { id: "5", title: "Abc", url: "/Abc" },
+    { id: "5", title: "Abc", url: "/" },
 
 ];
 
