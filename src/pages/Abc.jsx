@@ -162,7 +162,7 @@ const abc = () => {
           className="flex-1"
         >
           <img
-            src="https://www.dkgrouplabs.com/wp-content/uploads/2018/10/Myheart_image_2.png"
+            src="/imagesdkg/Myheart_image_2.png"
             alt="IoT Illustration"
             className="rounded-xl shadow-[0_0_30px_#00f6ff55] w-full max-w-xl "
           />
@@ -340,47 +340,47 @@ const industry = [
   {
     title: 'MINING',
     description: 'Remote Mining Site Monitoring Solution helps keep track of the assets and their security in the mining sites. Data from tags and',
-    icon: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/mining_1.png',
+    icon: '/imagesdkg/mining_1.png',
   },
   {
     title: 'Oil & Gas',
     description: 'Deep industry expertise and innovative IoT solutions & offerings can help the Oil & Gas industry clients optimize production,',
-    icon: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/oil_gas.png',
+    icon: '/imagesdkg/oil_gas.png',
   },
   {
     title: 'Logistics',
     description: 'Leverage the power of IoT offerings, which can provide highly integrated “Transportation and Warehouse Management Solutions”',
-    icon: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/logistics.png',
+    icon: '/imagesdkg/logistics.png',
   },
   {
     title: 'Healthcare',
     description: 'IoT solutions help healthcare companies continuously collect and analyze health data throughout the healthcare value chain,',
-    icon: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/automotive.png',
+    icon: '/imagesdkg/logistics.png',
   },
   {
     title: 'Industrial Manufacturing',
     description: 'Helps industrial manufacturers capitalize on the emerging business opportunities with digital disruptions, and better understand market trends',
-    icon: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/industrial_manufacturing.png',
+    icon: '/imagesdkg/industrial_manufacturing.png',
   },
   {
     title: 'Engineering & Construction',
     description: 'Helps E&C companies simplify, modernize and accelerate projects, thus supporting them by optimizing operations & maintenance,',
-    icon: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/automotive.png',
+    icon: '/imagesdkg/engineering_construction.png',
   },
   {
     title: 'Automotive',
     description: 'Company has a comprehensive understanding of the Automotive & Aerospace value chains, and helps companies in imagining',
-    icon: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/engineering_construction.png',
+    icon: '/imagesdkg/automotive.png',
   },
   {
     title: 'Consumer Packaged Goods and Retail',
     description: 'IoT solutions enable merchants to collect, share and analyze real-time IoT',
-    icon: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/logistics.png',
+    icon: '/imagesdkg/logistics.png',
   },
   {
     title: 'Hi-Tech & Consumer Electronics',
     description: 'Helps Hi-Tech companies innovate faster and operate in real-time, by leveraging IoT for a wide variety of business outcomes,',
-    icon: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/engineering_construction.png',
+    icon: '/imagesdkg/engineering_construction.png',
   },
 ];
 

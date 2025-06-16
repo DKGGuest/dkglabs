@@ -27,26 +27,26 @@ const smartCityCards = [
     title: "Waste to Energy",
     content:
       "WTE solutions help cities convert municipal waste into usable energy. India is projected to produce over 500 million tons of waste by 2050. Circular economy principles and PPP models are redefining waste management.",
-    image: "https://www.dkgrouplabs.com/wp-content/uploads/2021/05/waste.jpg", // replace with your own URL
+    image: "/imagesdkg/waste.jpg", // replace with your own URL
   },
   {
     title: "Garbage Monitoring",
     content:
       "Using IoT, GPS, LoRaWAN & RFID sensors to automate waste collection, track fill levels in bins, and route collection trucks efficiently through cloud-based dashboards.",
-    image: "https://www.dkgrouplabs.com/wp-content/uploads/2021/05/342.png", // replace with your own URL
+    image: "/imagesdkg/342.png", // replace with your own URL
   },
   {
     title: "Early Warning for Landslides",
     content:
       "IoT and AI models monitor precipitation, slopes, and terrain data to predict landslides. These wireless systems function across rugged terrains with long-range connectivity and real-time alerts.",
-    image: "https://www.dkgrouplabs.com/wp-content/uploads/2021/05/WhatsApp-Image-2021-05-20-at-5.01.12-PM.jpeg", // replace with your own URL
+    image: "/imagesdkg/landslide.jpeg", // replace with your own URL
   },
 ];
 
 const heroImages = [
-  'https://www.dkgrouplabs.com/wp-content/uploads/2019/04/home_banner_2.jpg',
-  'https://www.dkgrouplabs.com/wp-content/uploads/2019/04/ai.jpg',
-  'https://www.dkgrouplabs.com/wp-content/uploads/2019/04/home_banner-3.jpg',
+  '/imagesdkg/home_banner_1.jpg',
+  '/imagesdkg/ai.jpg',
+  '/imagesdkg/home_banner-3.jpg',
 ];
 
 export default function Consulting() {

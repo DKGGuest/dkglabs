@@ -6,19 +6,19 @@ const leadershipData = [
   {
     name: "Deep Krishna",
     role: "Founder",
-    image: "https://www.dkgrouplabs.com/wp-content/uploads/2020/06/Deep1.png",
+    image: "/imagesdkg/Deep1.png",
     bio: `Deep Krishna, Founder of DKG Labs is an entrepreneur and IT professional having 19 years of experience in ERP Program delivery, Product development and IT Consulting.`,
   },
   {
     name: "Deepak",
     role: "Technical Advisor",
-    image: "https://www.dkgrouplabs.com/wp-content/uploads/2020/06/deepak1.png",
+    image: "/imagesdkg/deepak1.png",
     bio: `Deepak has 20 years of experience in the IT industry with companies like Microsoft, HCL, Wipro and Newgen.`,
   },
   {
     name: "Sushil",
     role: "Product Design Lead",
-    image: "https://www.dkgrouplabs.com/wp-content/uploads/2020/06/sushil1.png",
+    image: "/imagesdkg/sushil1.png",
     bio: `Sushil is based out at Seattle, USA and has IT industry experience of over 19 years.`,
   },
   // {
@@ -35,19 +35,19 @@ const advisoryData = [
     name: "Prof B.B. Dhar",
     role:
       "Chief Mentor and Mining Visionary – DKG Labs, Ex.Vice President -RBEF, Ph.D, McGill University, Former Director CMRI, CSIR",
-    image: "https://www.dkgrouplabs.com/wp-content/uploads/2019/03/profile.jpg",
+    image: "/imagesdkg/B.B.-Dhar1-1.png",
   },
   {
     name: "Mr. N.N. Gautam",
     role:
       "Adviser, GMR Group, ACB India Ltd, Former Advisor, Ministry of Coal, UNDP/GEF-GOI CBM",
-    image: "https://www.dkgrouplabs.com/wp-content/uploads/2020/01/N.N.Gautam.png",
+    image: "/imagesdkg/N.N.Gautam1-1.png",
   },
   {
     name: "Mr. Anil Mathur",
     role:
       "Mining Consultant, Vice Chairman, MEAI, Rajasthan Chapter – Jaipur.",
-    image: "https://www.dkgrouplabs.com/wp-content/uploads/2020/01/Anil-Mathur.png",
+    image: "/imagesdkg/Anil-Mathur1-1.png",
   },
   {
     name: "Mr. M.S. Nagar",

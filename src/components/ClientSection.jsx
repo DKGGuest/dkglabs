@@ -1,20 +1,20 @@
 import { motion } from "framer-motion";
 
 const clients = [
-  { name: "Tata Steel", src: "https://www.dkgrouplabs.com/wp-content/uploads/2019/03/tata.png" },
-  { name: "Hero Cycles", src: "https://www.dkgrouplabs.com/wp-content/uploads/2020/01/Clients1.png" },
-  { name: "NSIC", src: "https://www.dkgrouplabs.com/wp-content/uploads/2019/03/NSIC-jobs-for-Persons-with-Disabilities.png" },
-  { name: "Aditya Birla", src: "https://www.dkgrouplabs.com/wp-content/uploads/2019/03/image25-1.jpg" },
-  { name: "NMDC", src: "https://www.dkgrouplabs.com/wp-content/uploads/2019/03/NMDC-Logo.jpg" },
-  { name: "Jitendra EV", src: "https://www.dkgrouplabs.com/wp-content/uploads/2020/01/Clients2.png" },
-  { name: "Henkel", src: "https://www.dkgrouplabs.com/wp-content/uploads/2020/01/Henkel.png" },
-  { name: "NSIT", src: "https://www.dkgrouplabs.com/wp-content/uploads/2019/03/0.png" },
-  { name: "SESA", src: "https://www.dkgrouplabs.com/wp-content/uploads/2019/03/sesa-goa1-300x280.jpg" },
-  { name: "Exide", src: "https://www.dkgrouplabs.com/wp-content/uploads/2020/01/Clients3.png" },
-  { name: "Wipro", src: "https://www.dkgrouplabs.com/wp-content/uploads/2019/03/1024px-Wipro_Logo.svg_.png" },
-  { name: "Tech Mahindra", src: "https://www.dkgrouplabs.com/wp-content/uploads/2020/01/Tech-Mahindra-1.png" },
-  { name: "Hcl", src: "https://www.dkgrouplabs.com/wp-content/uploads/2020/01/HCL-1.png" },
-  { name: "Gg", src: "https://www.dkgrouplabs.com/wp-content/uploads/2020/01/GE.png" },
+  { name: "Tata Steel", src: "/imagesdkg/tata.png" },
+  { name: "Hero Cycles", src: "/imagesdkg/hero cycle.png" },
+  { name: "NSIC", src: "/imagesdkg/NSIC.png" },
+  { name: "Aditya Birla", src: "/imagesdkg/aditya birla.jpg" },
+  { name: "NMDC", src: "/imagesdkg/NMDC-Logo.jpg" },
+  { name: "Jitendra EV", src: "/imagesdkg/jitendra.png" },
+  { name: "Henkel", src: "/imagesdkg/henkel.png" },
+  { name: "NSIT", src: "/imagesdkg/nsit.png" },
+  { name: "SESA", src: "/imagesdkg/sesa.jpg" },
+  { name: "Exide", src: "/imagesdkg/excide.png" },
+  { name: "Wipro", src: "/imagesdkg/wipro.png" },
+  { name: "Tech Mahindra", src: "/imagesdkg/Tech-Mahindra-1.png" },
+  { name: "Hcl", src: "/imagesdkg/HCL-1.png" },
+  { name: "Gg", src: "/imagesdkg/GE.png" },
 ];
 
 export default function ClientSection() {

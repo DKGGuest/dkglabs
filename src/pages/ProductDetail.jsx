@@ -14,7 +14,7 @@ const productData = [
       Our platform also supports multi-device integration and provides real-time analytics via the dashboard.
       Whether you need to track school buses, mining vehicles, or healthcare assets, GPS Factory delivers a scalable and cost-effective solution.
     `,
-    images: ['https://www.dkgrouplabs.com/wp-content/uploads/2019/04/Gpsfactory_image_1.png','https://www.dkgrouplabs.com/wp-content/uploads/2019/03/ora_3.png', 'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/ora_1.png'],
+    images: ['/imagesdkg/Gpsfactory_image_1.png','/imagesdkg/ora3.png', '/imagesdkg/ora_1.png'],
     specs: [
       { title: 'Application Areas', items: ['Student Tracking', 'Asset Management'] },
       { title: 'Specifications', items: ['Remote cut-off', 'Geo-fence'] },
@@ -35,9 +35,9 @@ const productData = [
     Sensor Factory is ideal for IoT deployments in factories, greenhouses, waste management systems, and infrastructure health monitoring.
   `,
   images: [
-    'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/sensorfactory1.png',
-    'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/sensorfactory2.png',
-    'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/sensorfactory3.png'
+    '/imagesdkg/Lora3.jpg',
+    '/imagesdkg/Lora.png',
+    '/imagesdkg/Lora2.jpg'
   ],
   specs: [
     { title: 'Application Areas', items: ['Industrial Automation', 'Smart Agriculture', 'Environmental Monitoring'] },
@@ -58,9 +58,9 @@ const productData = [
     Whether you're monitoring urban water supply, managing autonomous transportation, or building a real-time location system, the ORA series delivers the performance and flexibility required.
   `,
   images: [
-    'https://www.dkgrouplabs.com/wp-content/uploads/2019/04/LoRa3.jpg',
-    'https://www.dkgrouplabs.com/wp-content/uploads/2019/04/LoRa.png',
-    'https://www.dkgrouplabs.com/wp-content/uploads/2019/04/LoRA2.jpg'
+    '/imagesdkg/LoRa3.jpg',
+    '/imagesdkg/LoRa.png',
+    '/imagesdkg/LoRA2.jpg'
   ],
   specs: [
     {

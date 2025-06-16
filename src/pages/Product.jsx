@@ -25,17 +25,17 @@ export default function Product() {
     {
       title: 'Revolutionizing Technology',
       desc: 'Delivering products that power the future.',
-      image: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/02/bg10.png',
+      image: '/imagesdkg/bg10.png',
     },
     {
       title: 'Scalable & Smart Solutions',
       desc: 'From AI to IoT — engineered for performance.',
-      image: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/02/bg4.png',
+      image: '/imagesdkg/bg4.png',
     },
     {
       title: 'Powerful Developer Tools',
       desc: 'Designed to accelerate your digital journey.',
-      image: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/03/product_page.jpg',
+      image: '/imagesdkg/product_page.jpg',
     },
   ];
 

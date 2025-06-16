@@ -6,17 +6,17 @@ const heroImages = [
   {
     title: 'Empowering Innovation',
     desc: 'Explore the next frontier in AI, Vision, and IoT.',
-    image: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/04/home_banner_image_5.jpg',
+    image: '/imagesdkg/home_banner_image_5.jpg',
   },
   {
     title: 'Transforming Industries',
     desc: 'Cutting-edge solutions for real-world problems.',
-    image: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/02/1657b3cea5bb265.jpg',
+    image: '/imagesdkg/home_banner_6.jpg',
   },
   {
     title: 'Seamless Integration',
     desc: 'Connecting hardware and software like never before.',
-    image: 'https://www.dkgrouplabs.com/wp-content/uploads/2019/02/Connectedcars_EV_1.png',
+    image: '/imagesdkg/Connectedcars_EV_1.png',
   },
 ];
 

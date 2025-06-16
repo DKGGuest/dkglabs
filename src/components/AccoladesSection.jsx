@@ -2,11 +2,11 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const accolades = [
-  { src: "https://www.dkgrouplabs.com/wp-content/uploads/2019/04/awards_2.jpg", alt: "NASSCOM" },
-  { src: "https://www.dkgrouplabs.com/wp-content/uploads/2019/04/awards_3.jpg", alt: "AD ASTRA" },
-  { src: "https://www.dkgrouplabs.com/wp-content/uploads/2019/04/awards_4.jpg", alt: "HOT 100" },
-  { src: "https://www.dkgrouplabs.com/wp-content/uploads/2019/04/awards_5.jpg", alt: "NSIC" },
-  { src: "https://www.dkgrouplabs.com/wp-content/uploads/2019/04/awards_1.jpg", alt: "CIO Insider" },
+  { src: "/imagesdkg/awards_2.jpg", alt: "NASSCOM" },
+  { src: "/imagesdkg/awards_3.jpg", alt: "AD ASTRA" },
+  { src: "/imagesdkg/awards_4.jpg", alt: "HOT 100" },
+  { src: "/imagesdkg/awards_5.jpg", alt: "NSIC" },
+  { src: "/imagesdkg/awards_1.jpg", alt: "CIO Insider" },
 ];
 
 const fadeInUp = {
