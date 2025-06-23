@@ -139,10 +139,16 @@ const abc = () => {
                         <motion.div key={index} whileHover={{ scale: 1.05 }} className="flex">
                             <Card className="bg-gray-900 p-6 text-center shadow-xl border border-red-500 rounded-lg hover:shadow-red-500 flex-1">
                                 <CardContent>
-                                    <img src={industry.icon}  className="mx-auto h-12 mb-4" />
+                                    {/* <img src={industry.icon}  className="mx-auto h-12 mb-4" />
                                     <h3 className="text-2xl font-semibold mb-3 text-white">{industry.title}</h3>
-                                    <p className="text-gray-300 mb-4">{industry.description}</p>
-                                    
+                                    <p className="text-gray-300 mb-4">{industry.description}</p> */}
+                                    <img
+                                         src={industry.icon}
+                                         className="mx-auto h-12 mb-4"
+                                         alt={industry.title || "Industry Icon"} // ✅ Added alt attribute
+                                       />
+                                       <h3 className="text-2xl font-semibold mb-3 text-white">{industry.title}</h3>
+                                       <p className="text-gray-300 mb-4">{industry.description}</p>
                                 </CardContent>
                             </Card>
                         </motion.div>

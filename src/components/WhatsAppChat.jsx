@@ -11,12 +11,20 @@ const WhatsAppChat = () => {
     };
 
   return (
-    <button
-        onClick={handleClick}
-        className="text-white"
-    >
-        <img src={whatsapp} width={55} className="rounded-full" />
-    </button>
+    // <button
+    //     onClick={handleClick}
+    //     className="text-white"
+    // >
+    //     <img src={whatsapp} width={55} className="rounded-full" />
+    // </button>
+     <button onClick={handleClick} className="text-white">
+    <img
+      src={whatsapp}
+      width={55}
+      className="rounded-full"
+      alt="WhatsApp Chat Icon" // ✅ Add this line
+    />
+  </button>
   )
 }
 
