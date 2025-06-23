@@ -15,6 +15,17 @@ const clients = [
   { name: "Tech Mahindra", src: "/imagesdkg/Tech-Mahindra-1.png" },
   { name: "Hcl", src: "/imagesdkg/HCL-1.png" },
   { name: "Gg", src: "/imagesdkg/GE.png" },
+  { name: "Vedanta", src: "/imagesdkg/vedanta.png" },
+  { name: "Sai", src: "/imagesdkg/sai.png" },
+  { name: "Rites", src: "/imagesdkg/rites.png" },
+  { name: "Perfect", src: "/imagesdkg/perfect.png" },
+  { name: "Ncl", src: "/imagesdkg/ncl.png" },
+  { name: "IIT", src: "/imagesdkg/iit.png" },
+  { name: "IIA", src: "/imagesdkg/iia.png" },
+  { name: "Gir", src: "/imagesdkg/gir.png" },
+  { name: "Gazelle", src: "/imagesdkg/gazelle.png" },
+  { name: "Firefox", src: "/imagesdkg/firefox.png" },
+  { name: "CCRYN", src: "/imagesdkg/ccryn.png" },
 ];
 
 export default function ClientSection() {

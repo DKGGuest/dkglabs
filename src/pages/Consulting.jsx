@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { background, DKGLogo } from "../assets";
 
 const services = [
   {
@@ -61,6 +62,53 @@ export default function Consulting() {
 
   return (
     <div className="text-white">
+
+
+      <header className="fixed top-0 left-0 w-full z-50
+              bg-white/40 backdrop-blur-lg
+              border-b border-white/20
+              shadow-md py-3 px-7
+              flex justify-between items-center">
+              
+              {/* Logo and Title */}
+              <div className="flex items-center space-x-1">
+                <img
+                  // src="https://www.dkgrouplabs.com/wp-content/uploads/2025/05/DKGLogo.png"  // ⬅️ Replace with your logo path
+                  src={DKGLogo}  // ⬅️ Replace with your logo path
+                  alt="Logo"
+                  className="h-16 w-28   "
+                />
+                {/* <h1 className="text-2xl font-bold text-pink-200">Your Company</h1> */}
+              </div>
+            
+              {/* Navigation */}
+              <nav className="space-x-4">
+                <Link to="/" className="font-serif hover:text-black transition-colors duration-300 rounded-xl m-2 p-1">
+                  Home
+                </Link>
+                <Link to="/About" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
+                  About Us
+                </Link>
+                <Link to="/Product" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
+                  Product
+                </Link>
+                <Link to="/Consulting" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
+                  Consulting
+                </Link>
+                <Link to="/Home" className="font-serif hover:text-black transition-colors duration-300 rounded-xl m-2 p-1">
+                  AI CoE
+                </Link>
+                <Link to="/Innovation" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
+                  Innovation
+                </Link>
+                <Link to="../components/Contact2" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
+                  Contact Us
+                </Link>
+              </nav>
+            </header> 
+
+
+
       {/* 🔁 Fullscreen Image Slideshow */}
       <div className="relative w-full h-screen">
         <AnimatePresence>
@@ -80,7 +128,7 @@ export default function Consulting() {
       {/* 🔧 Consulting Section BELOW the slideshow */}
       <div className="relative bg-gradient-to-b from-gray-900 to-black px-6 py-14">
         {/* 🔙 Back Button */}
-        <div className="fixed top-6 left-6 z-50">
+        {/* <div className="fixed top-6 left-6 z-50">
           <Link to="/">
             <motion.button
               whileHover={{ scale: 1.05 }}
@@ -90,7 +138,7 @@ export default function Consulting() {
               ← Back to Main
             </motion.button>
           </Link>
-        </div>
+        </div> */}
 
         {/* Page Heading */}
         <motion.h1

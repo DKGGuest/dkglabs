@@ -6,6 +6,7 @@ import toast, { Toaster } from "react-hot-toast";
 import PhoneInput from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import { motion } from "framer-motion";
+import { background, DKGLogo } from "../assets";
 
 
 const Contact2 = () => {
@@ -32,7 +33,7 @@ const Contact2 = () => {
 
     axios.defaults.headers.post["Content-Type"] = "application/json";
     axios
-      .post("https://formsubmit.co/ajax/vleaptba@gmail.com", {
+      .post("https://formsubmit.co/ajax/3a0b0b8fff95e347a6c4c956e748dcad", {
         name,
         message,
         email,
@@ -55,8 +56,54 @@ const Contact2 = () => {
 
   return (
     <div className="relative bg-black text-white min-h-screen">
+
+       <header className="fixed top-0 left-0 w-full z-50
+                    bg-white/40 backdrop-blur-lg
+                    border-b border-white/20
+                    shadow-md py-3 px-7
+                    flex justify-between items-center">
+                    
+                    {/* Logo and Title */}
+                    <div className="flex items-center space-x-1">
+                      <img
+                        // src="https://www.dkgrouplabs.com/wp-content/uploads/2025/05/DKGLogo.png"  // ⬅️ Replace with your logo path
+                        src={DKGLogo}  // ⬅️ Replace with your logo path
+                        alt="Logo"
+                        className="h-16 w-28   "
+                      />
+                      {/* <h1 className="text-2xl font-bold text-pink-200">Your Company</h1> */}
+                    </div>
+                  
+                    {/* Navigation */}
+                    <nav className="space-x-4">
+                      <Link to="/" className="font-serif hover:text-black transition-colors duration-300 rounded-xl m-2 p-1">
+                        Home
+                      </Link>
+                      <Link to="/About" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
+                        About Us
+                      </Link>
+                      <Link to="/Product" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
+                        Product
+                      </Link>
+                      <Link to="/Consulting" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
+                        Consulting
+                      </Link>
+                      <Link to="/Home" className="font-serif hover:text-black transition-colors duration-300 rounded-xl m-2 p-1">
+                        AI CoE
+                      </Link>
+                      <Link to="/Innovation" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
+                        Innovation
+                      </Link>
+                      <Link to="../components/Contact2" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
+                        Contact Us
+                      </Link>
+                    </nav>
+                  </header> 
+      
+
+
       {/* 🔙 Fixed Back Button */}
-            <div className="fixed top-6 left-6 z-50">
+            {/* <div className="fixed top-6 left-6 z-50">
               <Link to="/">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
@@ -66,11 +113,11 @@ const Contact2 = () => {
                   ← Back to Main
                 </motion.button>
               </Link>
-            </div>
+            </div> */}
 
       <div><Toaster /></div>
 
-      <h1 id="contact" className="mb-8 p-3 font-extrabold text-center text-4xl text-transparent bg-clip-text bg-gradient-to-br from-purple-500">
+      <h1 id="contact" className="mb-8 p-3 font-extrabold text-center text-4xl text-transparent m-24 bg-clip-text bg-gradient-to-br from-purple-500">
         Contact Us
       </h1>
 
