@@ -49,6 +49,16 @@ export default function Innovation() {
     return () => clearInterval(interval);
   }, []);
 
+  // ✅ GTM Pageview Tracking
+  useEffect(() => {
+    if (window && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'pageview',
+        pagePath: window.location.pathname,
+      });
+    }
+  }, []);
+
   return (
     <div className="text-white">
 
