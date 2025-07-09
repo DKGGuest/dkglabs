@@ -37,12 +37,12 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="/healthcareDetails" element={<Healthcare />} />
                 <Route path="/" element={<Abc />} />
                 <Route path="/components/Contact" element={<Contact />} />
-                <Route path="/components/Contact2" element={<Contact2 />} />
+                <Route path="/Contact" element={<Contact2 />} />
                 <Route path="/products/:id" element={<ProductDetail />} />
                 <Route path="/About" element={<AboutUs />} />
                 <Route path="/Innovation" element={<Innovation />} />
                 <Route path="/Consulting" element={<Consulting />} />
-                <Route path="/Product" element={<Product />} />
+                <Route path="/product" element={<Product />} />
                 <Route path="/financeDetails" element={<Finance />} />
                 <Route path="/manufacturingAndAutomotiveDetails" element={<ManufacturingAndAutomotive />} /> 
                 <Route path="/educationDetails" element={<Education />} />

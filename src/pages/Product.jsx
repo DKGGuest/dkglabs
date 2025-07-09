@@ -69,7 +69,7 @@ export default function Product() {
                 <Link to="/About" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
                   About Us
                 </Link>
-                <Link to="/Product" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
+                <Link to="/product" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
                   Product
                 </Link>
                 <Link to="/Consulting" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
@@ -81,7 +81,7 @@ export default function Product() {
                 <Link to="/Innovation" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
                   Innovation
                 </Link>
-                <Link to="../components/Contact2" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
+                <Link to="/Contact" className="font-serif hover:text-black transition-colors duration-300  rounded-xl m-2 p-1">
                   Contact Us
                 </Link>
               </nav>
