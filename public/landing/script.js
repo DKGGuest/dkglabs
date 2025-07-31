@@ -114,7 +114,7 @@ if (quickForm) {
     })
       .then((response) => {
         // Success - redirect to thank you page
-        window.location.href = "Thanks.html";
+        window.location.href = "/landing/Thanks.html";
       })
       .catch((error) => {
         console.error("Error:", error);
