@@ -85,7 +85,7 @@
       <form class="quick-form" id="quickForm">
         <input type="text" name="name" id="name" placeholder="Your Name" required />
         <input type="email" name="email" id="email" placeholder="Business Email" required />
-        <input type="text" name="company" id="company" placeholder="Company" required />
+        <input type="text" name="company" id="company" placeholder="Company Name" required pattern="[A-Za-z\s]{4,}" title="Company name must contain only letters and spaces, minimum 4 characters" />
         <select name="industry" id="industry" required>
           <option value="" disabled selected>Your Industry</option>
           <option>Automotive</option>
@@ -117,3 +117,115 @@
   <script src="/landing/script.js"></script>
 </body>
 </html>
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accelerate with GenAI | DKG Labs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/landing/style.css">
+</head>
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        <img src="/landing/DKG.png" class="logo-img" alt="DKG Labs" />
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-particles" id="particles"></div>
+    <div class="hero-content">
+      <h1>Transform Your Business with GenAI</h1>
+      <p>DKG Labs helps organizations harness Generative AI, Intelligent Automation, and IoT to solve real business problems faster and smarter than ever before.</p>
+      <a href="#benefits" class="cta-button">Start Your Journey →</a>
+    </div>
+  </section> -->
+
+  <!-- Key Benefits & Quick Registration Section -->
+  <!-- <section class="key-benefits-section fade-in" id="benefits">
+    <div class="benefits-content">
+      <h2>Why Choose DKG Labs for GenAI?</h2>
+      <div class="benefits-grid">
+        <div class="benefit-item"><div class="benefit-icon"></div><div class="benefit-content"><div class="benefit-title">50+ AI Projects Delivered</div><div class="benefit-description">Proven expertise across Mining, Automotive, Healthcare & more industries</div></div></div>
+        <div class="benefit-item"><div class="benefit-icon"></div><div class="benefit-content"><div class="benefit-title">AI Agents That Think & Act</div><div class="benefit-description">Beyond automation to intelligent decision-making systems</div></div></div>
+        <div class="benefit-item"><div class="benefit-icon"></div><div class="benefit-content"><div class="benefit-title">Fast Prototyping</div><div class="benefit-description">Transform ideas to working pilots in weeks, not months</div></div></div>
+        <div class="benefit-item"><div class="benefit-icon"></div><div class="benefit-content"><div class="benefit-title">Enterprise-Grade Security</div><div class="benefit-description">Built with compliance and data governance in mind</div></div></div>
+        <div class="benefit-item"><div class="benefit-icon"></div><div class="benefit-content"><div class="benefit-title">Connected Intelligence</div><div class="benefit-description">IoT integration for real-time visibility and predictive analytics</div></div></div>
+        <div class="benefit-item"><div class="benefit-icon"></div><div class="benefit-content"><div class="benefit-title">Industry-Adaptable Solutions</div><div class="benefit-description">Proven playbooks customized to your specific domain</div></div></div>
+      </div>
+    </div>
+
+    <div class="quick-form-container">
+      <h3>Get Started Today</h3>
+      <p>Quick consultation - no commitment required</p>
+      <form class="quick-form" id="quickForm" method="POST">
+        <input type="text" name="name" id="name" placeholder="Your Name" required />
+        <input type="email" name="email" id="email" placeholder="Business Email" required />
+        <input type="text" name="company" id="company" placeholder="Company" required />
+        <select name="industry" id="industry" required>
+          <option value="" disabled selected>Your Industry</option>
+          <option>Automotive</option>
+          <option>Mining</option>
+          <option>Healthcare</option>
+          <option>Manufacturing</option>
+          <option>Retail</option>
+          <option>FinTech</option>
+          <option>Logistics</option>
+          <option>Other</option>
+        </select> -->
+
+        <!-- ✅ Honeypot Field -->
+        <!-- <input type="text" name="website" id="website" style="display:none" tabindex="-1" autocomplete="off"> -->
+
+        <!-- ✅ reCAPTCHA token will be injected here -->
+        <!-- <input type="hidden" name="g-recaptcha-response" id="g-recaptcha-response"> -->
+
+        <!-- <button type="submit" class="quick-submit-btn" id="submitBtn">Get Free Consultation 🚀</button>
+      </form> -->
+
+      <!-- <div class="form-website-section">
+        <div class="form-website-text">Want to know more about us?</div>
+        <a href="https://www.dkgrouplabs.com/" class="form-website-btn" target="_blank">
+          <span class="btn-icon">🚀</span>
+          Visit DKG Labs Website
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    &copy; 2025 DKG Labs Pvt. Ltd. | <a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Contact Us</a>
+  </div>
+
+  <script src="/landing/script.js"></script> -->
+
+  <!-- ✅ Load Google reCAPTCHA v3 -->
+  <!-- <script src="https://www.google.com/recaptcha/api.js?render=YOUR_SITE_KEY"></script>
+  <script>
+    document.getElementById("quickForm").addEventListener("submit", function(event) { -->
+      <!-- // Check honeypot first
+      if (document.getElementById("website").value !== "") {
+        event.preventDefault();
+        alert("Spam detected!");
+        return false;
+      }
+
+      event.preventDefault(); // Stop form until reCAPTCHA runs
+      grecaptcha.ready(function() {
+        grecaptcha.execute("YOUR_SITE_KEY", {action: "submit"}).then(function(token) {
+          document.getElementById("g-recaptcha-response").value = token;
+          event.target.submit(); // Submit after token attached
+        });
+      });
+    });
+  </script>
+</body>
+</html> -->

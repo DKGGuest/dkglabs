@@ -74,7 +74,8 @@ function updateParticles() {
 document.addEventListener('DOMContentLoaded', () => {
   createParticles();
   handleScrollAnimations();
-  
+  validateCompanyInput(); // Initialize company validation
+
   // Auto-trigger scroll animations for thank you page
   setTimeout(() => {
     handleScrollAnimations();
@@ -90,11 +91,117 @@ window.addEventListener('resize', () => {
   updateParticles();
 });
 
+// Company input validation
+function validateCompanyInput() {
+  const companyInput = document.getElementById('company');
+  if (!companyInput) return;
+
+  // Real-time validation on input
+  companyInput.addEventListener('input', function(e) {
+    const value = e.target.value;
+    const alphabetOnlyRegex = /^[A-Za-z\s]*$/;
+
+    // Remove any non-alphabetic characters (except spaces)
+    if (!alphabetOnlyRegex.test(value)) {
+      e.target.value = value.replace(/[^A-Za-z\s]/g, '');
+    }
+
+    // Check minimum length and show validation message
+    const isValid = e.target.value.length >= 4 && alphabetOnlyRegex.test(e.target.value);
+
+    // Remove existing validation message
+    const existingMessage = e.target.parentNode.querySelector('.validation-message');
+    if (existingMessage) {
+      existingMessage.remove();
+    }
+
+    // Add validation styling and message
+    if (e.target.value.length > 0 && !isValid) {
+      e.target.style.borderColor = '#ff4444';
+
+      if (e.target.value.length < 4) {
+        const message = document.createElement('div');
+        message.className = 'validation-message';
+        message.style.color = '#ff4444';
+        message.style.fontSize = '12px';
+        message.style.marginTop = '4px';
+        message.textContent = 'Company name must be at least 4 characters long';
+        e.target.parentNode.appendChild(message);
+      }
+    } else if (isValid) {
+      e.target.style.borderColor = '#22c55e';
+    } else {
+      e.target.style.borderColor = '';
+    }
+  });
+
+  // Validation on blur
+  companyInput.addEventListener('blur', function(e) {
+    const value = e.target.value.trim();
+    const alphabetOnlyRegex = /^[A-Za-z\s]{4,}$/;
+
+    // Remove existing validation message
+    const existingMessage = e.target.parentNode.querySelector('.validation-message');
+    if (existingMessage) {
+      existingMessage.remove();
+    }
+
+    if (value && !alphabetOnlyRegex.test(value)) {
+      e.target.style.borderColor = '#ff4444';
+      const message = document.createElement('div');
+      message.className = 'validation-message';
+      message.style.color = '#ff4444';
+      message.style.fontSize = '12px';
+      message.style.marginTop = '4px';
+
+      if (value.length < 4) {
+        message.textContent = 'Company name must be at least 4 characters long';
+      } else {
+        message.textContent = 'Company name must contain only letters and spaces';
+      }
+
+      e.target.parentNode.appendChild(message);
+    } else if (value) {
+      e.target.style.borderColor = '#22c55e';
+    }
+  });
+}
+
 // Enhanced Form submission with loading states and redirect
 const quickForm = document.getElementById("quickForm");
 if (quickForm) {
   quickForm.addEventListener("submit", function (e) {
     e.preventDefault();
+
+    // Validate company field before submission
+    const companyInput = document.getElementById('company');
+    const companyValue = companyInput.value.trim();
+    const alphabetOnlyRegex = /^[A-Za-z\s]{4,}$/;
+
+    if (!alphabetOnlyRegex.test(companyValue)) {
+      // Show error message
+      const existingMessage = companyInput.parentNode.querySelector('.validation-message');
+      if (existingMessage) {
+        existingMessage.remove();
+      }
+
+      const message = document.createElement('div');
+      message.className = 'validation-message';
+      message.style.color = '#ff4444';
+      message.style.fontSize = '12px';
+      message.style.marginTop = '4px';
+
+      if (companyValue.length < 4) {
+        message.textContent = 'Company name must be at least 4 characters long';
+      } else {
+        message.textContent = 'Company name must contain only letters and spaces';
+      }
+
+      companyInput.parentNode.appendChild(message);
+      companyInput.style.borderColor = '#ff4444';
+      companyInput.focus();
+      return;
+    }
 
     const form = e.target;
     const formData = new FormData(form);
@@ -106,7 +213,7 @@ if (quickForm) {
     const originalText = submitBtn.textContent;
     submitBtn.textContent = 'Submitting...';
 
-    const scriptURL = "https://script.google.com/macros/s/AKfycbwQLzwGQHZgEwZuW_8uH56aVhKqlUP6qDG304f_psVLc_5t0It-tLSVJl5uLQMpkwWb0g/exec";
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwdpHT7xYkXrUsVd31zEy2DKwFl-pwWm7vCCoWuwTHoH-0vm5F2wS-vqqSuk1zl-WY_xQ/exec";
 
     fetch(scriptURL, {
       method: "POST",
