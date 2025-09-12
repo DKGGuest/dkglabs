@@ -23,6 +23,26 @@ import AboutUs from "./pages/About.jsx";
 import  Contact2  from "./components/Contact2.jsx";
 import ProductDetail from "./pages/ProductDetail.jsx";
 
+// Component for CLP redirect
+const CLPRedirect = () => {
+    React.useEffect(() => {
+        window.location.href = "https://clp-six.vercel.app/";
+    }, []);
+
+    return (
+        <div style={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100vh',
+            fontSize: '18px',
+            color: '#333'
+        }}>
+            Redirecting to CLP...
+        </div>
+    );
+};
+
 // import { Contact } from "lucide-react";
 
 
@@ -36,6 +56,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="/ai-consulting" element={<AIService />} />
                 <Route path="/healthcareDetails" element={<Healthcare />} />
                 <Route path="/" element={<Abc />} />
+                <Route path="/clp" element={<CLPRedirect />} />
                 <Route path="/components/Contact" element={<Contact />} />
                 <Route path="/Contact" element={<Contact2 />} />
                 <Route path="/products/:id" element={<ProductDetail />} />
@@ -44,7 +65,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
                 <Route path="/Consulting" element={<Consulting />} />
                 <Route path="/product" element={<Product />} />
                 <Route path="/financeDetails" element={<Finance />} />
-                <Route path="/manufacturingAndAutomotiveDetails" element={<ManufacturingAndAutomotive />} /> 
+                <Route path="/manufacturingAndAutomotiveDetails" element={<ManufacturingAndAutomotive />} />
                 <Route path="/educationDetails" element={<Education />} />
                 <Route path="/entertainmentAndMediaDetails" element={<EntertainmentAndMedia />} />
                 <Route path="/exploreMore" element={<ExploreMorePage />} />
