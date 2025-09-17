@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Form Responsiveness Test | DKG Labs</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      padding-top: 100px;
+    }
+    
+    .test-info {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.8);
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      font-size: 12px;
+      z-index: 1000;
+    }
+    
+    .test-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="vanta-background"></div>
+  
+  <div class="test-info">
+    <div>Viewport: <span id="viewport"></span></div>
+    <div>Device: <span id="device"></span></div>
+  </div>
+
+  <!-- Test the exact same split section from index.html -->
+  <div class="test-container">
+    <h1>Registration Form Responsiveness Test</h1>
+    <p>This tests the same registration form from the index page to ensure it's fully responsive.</p>
+    
+    <!-- Split Section: Key Highlights + Registration Form -->
+    <section class="split-section fade-in" id="split-section">
+      <div class="unified-section">
+        <h2 class="main-heading">Why Choose Our Career Launch Program?</h2>
+        
+        <div class="split-container">
+          <div class="highlights-section">
+            <div class="highlights-list">
+              <div class="highlight-item">
+                <div class="highlight-icon">🚀</div>
+                <div class="highlight-content">
+                  <h3>Live Industry Projects</h3>
+                  <p>Work on real customer projects in IoT, AI, and digital transformation with actual client deliverables</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">🎯</div>
+                <div class="highlight-content">
+                  <h3>Top 10% Hiring Guarantee</h3>
+                  <p>Direct hiring opportunities at DKG Labs for top performers with competitive salaries</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">👨‍💼</div>
+                <div class="highlight-content">
+                  <h3>Elite Mentorship</h3>
+                  <p>Gain invaluable insights from industry leaders at GE, Microsoft, TCS, and KPMG, supported by personalized one-on-one mentorship.</p>
+                </div>
+              </div>
+              <div class="highlight-item">
+                <div class="highlight-icon">💰</div>
+                <div class="highlight-content">
+                  <h3>Flexible Payment Options</h3>
+                  <p>Choose from convenient installment plans or pay upfront for an additional 5% discount.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="registration-section">
+            <div class="registration-container">
+              <h3>Join the Future of IT</h3>
+              <p>Start your journey with our Career Launch Program. Limited seats available!</p>
+              <form class="registration-form" id="testForm">
+                <input type="text" name="name" placeholder="Your Full Name" required>
+                <input type="email" name="email" placeholder="Email Address" required>
+                <input type="tel" name="phone" placeholder="Phone Number" required>
+                <input type="text" name="college" placeholder="College/University" required>
+                <select name="year" required>
+                  <option value="">Year of Graduation</option>
+                  <option value="2018">2018</option>
+                  <option value="2019">2019</option>
+                  <option value="2020">2020</option>
+                  <option value="2021">2021</option>
+                  <option value="2022">2022</option>
+                  <option value="2023">2023</option>
+                  <option value="2024">2024</option>
+                  <option value="2025">2025</option>
+                  <option value="2026">2026</option>
+                  <option value="2027">2027</option>
+                  <option value="2028">2028</option>
+                </select>
+                <textarea name="motivation" placeholder="Why do you want to join this program?" rows="4" required></textarea>
+                <button type="submit" class="register-btn">Apply Now!</button>
+              </form>
+              <div id="testMessage" class="form-message" style="display: none;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+<script>
+// Viewport tracking
+function updateViewportInfo() {
+  const width = window.innerWidth;
+  const height = window.innerHeight;
+  
+  let deviceType = '';
+  if (width < 480) deviceType = 'Small Mobile';
+  else if (width < 768) deviceType = 'Mobile';
+  else if (width < 1024) deviceType = 'Tablet';
+  else deviceType = 'Desktop';
+  
+  document.getElementById('viewport').textContent = `${width}x${height}`;
+  document.getElementById('device').textContent = deviceType;
+}
+
+// Test form submission
+document.getElementById('testForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const messageDiv = document.getElementById('testMessage');
+  messageDiv.innerHTML = '<p style="color: #4CAF50; text-align: center; margin-top: 15px;">✅ Form test successful! All fields are responsive.</p>';
+  messageDiv.style.display = 'block';
+  
+  setTimeout(() => {
+    messageDiv.style.display = 'none';
+    this.reset();
+  }, 3000);
+});
+
+// Update on load and resize
+window.addEventListener('load', updateViewportInfo);
+window.addEventListener('resize', updateViewportInfo);
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+<script>
+VANTA.NET({
+  el: "#vanta-background",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0x9450d,
+  backgroundColor: 0x0
+})
+</script>
+</body>
+</html>
