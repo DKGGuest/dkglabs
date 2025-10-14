@@ -9,8 +9,8 @@
       "destination": "/clp/index.html"
     },
     {
-      "source": "/Gen-AI",
-      "destination": "/GenAI/index.html"
+      "source": "/GenAI",
+      "destination": "/Gen-AI/index.html"
     },
     {
       "source": "/(.*)",
