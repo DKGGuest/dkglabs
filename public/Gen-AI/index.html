@@ -1,225 +1,656 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DKG Labs — Lead Capture</title>
-<meta name="description" content="Join DKG Labs. Get a demo, request pricing, or ask a question.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/Gen-AI/styles.css">
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17416103083">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-17416103083');
-</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="DKG Labs - Generative AI and Technology Solutions. Transform your business with GenAI.">
+    <title>DKG Labs - GenAI & Technology Solutions | Transform Your Business</title>
+    <link rel="stylesheet" href="/Gen-AI/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<div id="vanta-bg" aria-hidden="true"></div>
-<div id="bg-dim" aria-hidden="true"></div>
-<header class="site-header">
-  <!-- <div class="brand"><a href="https://www.dkgrouplabs.com/" target="_blank" rel="noopener noreferrer"><img src="/Gen-AI/DKG.png" alt="DKG Labs logo" class="logo"></a></div> -->
-<div class="container header-inner">
-<div class="brand"><a href="https://www.dkgrouplabs.com/" target="_blank" rel="noopener noreferrer"><img src="/Gen-AI/DKG.png" alt="DKG Labs logo" class="logo"></a></div>
-<!-- <nav class="nav"></nav> -->
-</div>
-</header>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#home" class="logo" aria-label="Go to top">
+                    <img src="/Gen-AI/DKG.png" alt="DKG Labs" class="logo-img">
+                </a>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="https://dkgrouplabs.com" class="btn-nav">Visit DKG Labs</a></li>
+                </ul>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
-<main>
-<section class="hero">
-<div class="container hero-inner">
-<div class="hero-header">
-<h1>Transform Your Business with GenAI, AI & IoT</h1>
-<p>DKG Labs empowers organizations to harness Generative AI, Artificial Intelligence, and IoT to drive measurable impact, improve decision-making, and innovate faster than ever before.</p>
-</div>
-<ul class="hero-bullets">
-<li>Delivered 50+ AI & IoT projects across Mining, Automotive, Healthcare & more, driving 15–40% efficiency gains.</li>
-<li>Built GenAI agents that learn, adapt, and make autonomous decisions beyond simple automation.</li>
-<li>Converted complex ideas into working prototypes in weeks, accelerating time-to-market.</li>
-<li>Ensured enterprise-grade security & compliance with robust data governance frameworks.</li>
-<li>Integrated IoT devices & platforms for predictive analytics, real-time monitoring, and smarter operations.</li>
-</ul>
-<div class="hero-card">
-<h2>Get in touch</h2>
-<form id="leadForm" novalidate>
-<div class="field">
-<label for="fullName">Name</label>
-<input id="fullName" name="fullName" type="text" autocomplete="name" required>
-<p class="error" data-error-for="fullName"></p>
- </div>
-<div class="field">
-<label for="email">Email Id</label>
-<input id="email" name="email" type="email" inputmode="email" autocomplete="email" required>
-<p class="error" data-error-for="email"></p>
- </div>
-<div class="field">
-<label for="company">Company Name</label>
-<input id="company" name="company" type="text" autocomplete="organization" required>
-<p class="error" data-error-for="company"></p>
- </div>
-<div class="field">
-<label for="industry">Select Your Industry</label>
-<select id="industry" name="industry" required>
-<option value="" disabled selected>Select your industry</option>
-<option>Automotive</option>
-<option>Fintech</option>
-<option>Healthcare</option>
-<option>Logistics</option>
-<option>Manufacturing</option>
-<option>Mining</option>
-<option>Retail</option>
-<option>Other</option>
-</select>
-<p class="error" data-error-for="industry"></p>
- </div>
-<button type="submit" class="button">Request demo</button>
-<p class="form-note" id="formNote" role="status" aria-live="polite"></p>
-</form>
-</div>
-</div>
-</section>
+    <!-- Hero Section -->
+    <section id="home" class="hero hero-centered">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <span class="badge-icon">✨</span>
+                        <span>Innovation-Driven Technology Solutions</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Transform Your Business with
+                        <span class="gradient-text">GenAI, IoT Powered Innovation</span>
+                    </h1>
+                    <p class="hero-description">
+                        DKG Labs delivers cutting-edge Generative AI and technology solutions that drive growth, 
+                        efficiency, and competitive advantage. Partner with us to unlock your business potential.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Schedule Free Consultation</a>
+                        <a href="#services" class="btn btn-secondary">Explore Solutions</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="100">0</div>
+                            <div class="stat-label">Projects Delivered</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="95">0</div>
+                            <div class="stat-label">Client Satisfaction %</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-target="50">0</div>
+                            <div class="stat-label">Expert Team</div>
+                        </div>
+                    </div>
+                    <!-- Mobile-only clients marquee inside hero -->
+                    <div class="hero-clients">
+                        <div class="hero-clients-title">Trusted By</div>
+                        <div class="marquee-wrapper compact">
+                            <div class="marquee-track">
+                                <img src="Aditya Birla.png" alt="Aditya Birla" class="client-logo" loading="lazy">
+                                <img src="Maruti Suzuki.png" alt="Maruti Suzuki" class="client-logo" loading="lazy">
+                                <img src="Tata Steel.png" alt="Tata Steel" class="client-logo" loading="lazy">
+                                <img src="Tech Mahindra.png" alt="Tech Mahindra" class="client-logo" loading="lazy">
+                                <img src="Vedanta.png" alt="Vedanta" class="client-logo" loading="lazy">
+                                <img src="Wipro.png" alt="Wipro" class="client-logo" loading="lazy">
+                                <img src="HCL Tech.png" alt="HCL Tech" class="client-logo" loading="lazy">
+                                <!-- duplicate for seamless loop -->
+                                <img src="Aditya Birla.png" alt="Aditya Birla" class="client-logo" loading="lazy">
+                                <img src="Maruti Suzuki.png" alt="Maruti Suzuki" class="client-logo" loading="lazy">
+                                <img src="Tata Steel.png" alt="Tata Steel" class="client-logo" loading="lazy">
+                                <img src="Tech Mahindra.png" alt="Tech Mahindra" class="client-logo" loading="lazy">
+                                <img src="Vedanta.png" alt="Vedanta" class="client-logo" loading="lazy">
+                                <img src="Wipro.png" alt="Wipro" class="client-logo" loading="lazy">
+                                <img src="HCL Tech.png" alt="HCL Tech" class="client-logo" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="hero-orb orb-1"></div>
+                    <div class="hero-orb orb-2"></div>
 
-<!-- About section will be added later -->
+                    <div class="hero-showcase">
+                        <div class="prompt-card">
+                            <div class="prompt-bar">
+                                <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+                                <span class="prompt-title">GenAI Workflow</span>
+                            </div>
+                            <div class="prompt-body">
+                                <div class="prompt-line"><span class="label">Prompt</span><span class="text" id="typedPrompt">Generate outreach emails for new leads...</span></div>
+                                <div class="prompt-line"><span class="label">Result</span><span class="text success" id="typedResult">3 tailored emails with subject lines and CTAs</span></div>
+                            </div>
+                        </div>
+                        <div class="chips" id="heroChips">
+                            <span class="chip">AI Agents</span>
+                            <span class="chip">RAG Pipelines</span>
+                            <span class="chip">Automation</span>
+                            <span class="chip">Vision + OCR</span>
+                            <span class="chip">Chatbots</span>
+                            <span class="chip">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background"></div>
+    </section>
 
-<!-- Features, pricing, and FAQ removed for now -->
-</main>
+    <!-- Clients Marquee -->
+    <section class="clients-marquee" aria-label="Our Clients">
+        <div class="container">
+            <div class="section-header small">
+                <span class="section-badge">Our Clients</span>
+            </div>
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <img src="/Gen-AI/Aditya Birla.png" alt="Aditya Birla" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Almerio.png" alt="Almerio" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Ayush.png" alt="Ayush" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/CCRYN.png" alt="CCRYN" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Exide.png" alt="Exide" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Firefox.png" alt="Firefox" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Gazelle Digital.png" alt="Gazelle Digital" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/GIR Logistics.png" alt="GIR Logistics" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/HCL Tech.png" alt="HCL Tech" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Henkel.png" alt="Henkel" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Hero Cycles.png" alt="Hero Cycles" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/IIA.png" alt="IIA" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/IIT Bombay.png" alt="IIT Bombay" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Jitendra EV.png" alt="Jitendra EV" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Maruti Suzuki.png" alt="Maruti Suzuki" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/NCL.png" alt="NCL" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/NMDC.png" alt="NMDC" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/NSIC.png" alt="NSIC" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/NSUT.png" alt="NSUT" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Perfect ID.png" alt="Perfect ID" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/RITES.png" alt="RITES" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/SAI.png" alt="SAI" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Sesa Goa.png" alt="Sesa Goa" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Tata Steel.png" alt="Tata Steel" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Tech Mahindra.png" alt="Tech Mahindra" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Vedanta.png" alt="Vedanta" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/volkswagen.png" alt="Volkswagen" class="client-logo" loading="lazy">
+                    <img src="/Gen-AI/Wipro.png" alt="Wipro" class="client-logo" loading="lazy">
+                    <!-- duplicate sequence for seamless loop -->
+                    <img src="Aditya Birla.png" alt="Aditya Birla" class="client-logo" loading="lazy">
+                    <img src="Almerio.png" alt="Almerio" class="client-logo" loading="lazy">
+                    <img src="Ayush.png" alt="Ayush" class="client-logo" loading="lazy">
+                    <img src="CCRYN.png" alt="CCRYN" class="client-logo" loading="lazy">
+                    <img src="Exide.png" alt="Exide" class="client-logo" loading="lazy">
+                    <img src="Firefox.png" alt="Firefox" class="client-logo" loading="lazy">
+                    <img src="Gazelle Digital.png" alt="Gazelle Digital" class="client-logo" loading="lazy">
+                    <img src="GIR Logistics.png" alt="GIR Logistics" class="client-logo" loading="lazy">
+                    <img src="HCL Tech.png" alt="HCL Tech" class="client-logo" loading="lazy">
+                    <img src="Henkel.png" alt="Henkel" class="client-logo" loading="lazy">
+                    <img src="Hero Cycles.png" alt="Hero Cycles" class="client-logo" loading="lazy">
+                    <img src="IIA.png" alt="IIA" class="client-logo" loading="lazy">
+                    <img src="IIT Bombay.png" alt="IIT Bombay" class="client-logo" loading="lazy">
+                    <img src="Jitendra EV.png" alt="Jitendra EV" class="client-logo" loading="lazy">
+                    <img src="Maruti Suzuki.png" alt="Maruti Suzuki" class="client-logo" loading="lazy">
+                    <img src="NCL.png" alt="NCL" class="client-logo" loading="lazy">
+                    <img src="NMDC.png" alt="NMDC" class="client-logo" loading="lazy">
+                    <img src="NSIC.png" alt="NSIC" class="client-logo" loading="lazy">
+                    <img src="NSUT.png" alt="NSUT" class="client-logo" loading="lazy">
+                    <img src="Perfect ID.png" alt="Perfect ID" class="client-logo" loading="lazy">
+                    <img src="RITES.png" alt="RITES" class="client-logo" loading="lazy">
+                    <img src="SAI.png" alt="SAI" class="client-logo" loading="lazy">
+                    <img src="Sesa Goa.png" alt="Sesa Goa" class="client-logo" loading="lazy">
+                    <img src="Tata Steel.png" alt="Tata Steel" class="client-logo" loading="lazy">
+                    <img src="Tech Mahindra.png" alt="Tech Mahindra" class="client-logo" loading="lazy">
+                    <img src="Vedanta.png" alt="Vedanta" class="client-logo" loading="lazy">
+                    <img src="volkswagen.png" alt="Volkswagen" class="client-logo" loading="lazy">
+                    <img src="Wipro.png" alt="Wipro" class="client-logo" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<!-- Company content section (scroll target) -->
-<section id="company" class="company">
-<div class="container">
-<h2 class="section-title">Why DKG Labs is Your Trusted Gen AI + IoT Partner</h2>
-<p class="section-sub">We specialize in Gen AI-driven, IoT-enabled digital transformation to maximize efficiency, safety, and innovation.</p>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Services</span>
+                <h2 class="section-title">GenAI & IoT Powered Technology Services</h2>
+                <p class="section-description">
+                    From AI implementation to cloud infrastructure, we provide end-to-end technology solutions 
+                    tailored to your business needs.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="services-carousel" aria-roledescription="carousel">
+                    <button class="carousel-btn prev" aria-label="Previous service" tabindex="0">‹</button>
+                    <div class="services-track" role="group" aria-live="polite">
+                        <div class="service-card">
+                            <div class="service-icon">🤖</div>
+                            <h3 class="service-title">AI / GenAI Solutions</h3>
+                            <ul class="service-features">
+                                <li>Predictive and generative AI models for automation and insights</li>
+                                <li>Computer vision for safety, tracking, and defect detection</li>
+                                <li>Domain-specific GenAI assistants for operations support</li>
+                                <li>NLP chatbots and document intelligence systems</li>
+                            </ul>
+                            <a href="#contact" class="service-link">Learn More →</a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">📡</div>
+                            <h3 class="service-title">IoT & Sensor-Based Systems</h3>
+                            <ul class="service-features">
+                                <li>IoT monitoring for fleets, assets, and environments</li>
+                                <li>Edge sensor integration for real-time analytics</li>
+                                <li>Predictive maintenance for industrial equipment</li>
+                                <li>IoT dashboards with analytics and mobile access</li>
+                            </ul>
+                            <a href="#contact" class="service-link">Learn More →</a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">💻</div>
+                            <h3 class="service-title">Custom Software Development</h3>
+                            <ul class="service-features">
+                                <li>Enterprise web and mobile app development</li>
+                                <li>AI-driven dashboards and control interfaces</li>
+                                <li>ERP/DMS and third-party system integration</li>
+                                <li>Rapid MVP and POC prototyping</li>
+                            </ul>
+                            <a href="#contact" class="service-link">Learn More →</a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">☁️</div>
+                            <h3 class="service-title">Data Engineering & Cloud Platforms</h3>
+                            <ul class="service-features">
+                                <li>Cloud data pipelines and architecture design</li>
+                                <li>Real-time analytics and visualization dashboards</li>
+                                <li>Data cleaning, transformation, and warehousing</li>
+                                <li>Cloud migration and cybersecurity compliance</li>
+                            </ul>
+                            <a href="#contact" class="service-link">Learn More →</a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🏢</div>
+                            <h3 class="service-title">Digital Transformation for Enterprises</h3>
+                            <ul class="service-features">
+                                <li>Legacy system modernization with AI and IoT</li>
+                                <li>Process automation using RPA and digital twins</li>
+                                <li>Data-driven operational performance dashboards</li>
+                                <li>Enterprise digital maturity and roadmap planning</li>
+                            </ul>
+                            <a href="#contact" class="service-link">Learn More →</a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">📊</div>
+                            <h3 class="service-title">IT Consulting</h3>
+                            <ul class="service-features">
+                                <li>Consulting for AI, IoT, and data initiatives</li>
+                                <li>POC development and scalability assessment</li>
+                                <li>Solution architecture aligned with business goals</li>
+                                <li>Advisory on infrastructure and system integration</li>
+                            </ul>
+                            <a href="#contact" class="service-link">Learn More →</a>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" aria-label="Next service" tabindex="0">›</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="grid cards-2">
-<article class="card ico who">
-<h3>Who We Are</h3>
-<ul>
-<li>12+ year-old deep tech company, Founded by IIT alumni</li>
-<li>Prior experience at Microsoft, TCS, KPMG, HCL, and Tech Mahindra</li>
-<li><strong>Mission:</strong> Solve real-world problems faster, smarter, and safer with  AI, IoT, and GenAI.</li>
-</ul>
- </article>
-<article class="card ico expertise">
-<h3>Our Expertise</h3>
-<ul>
-<li><strong>Generative AI</strong> for automated knowledge generation, report drafting, content creation, and decision-support.</li>
-<li><strong>Gen AI & Machine Learning</strong> for predictive modeling, computer vision, anomaly detection, and optimization.</li>
-<li><strong>IoT & Smart Devices</strong> for real-time monitoring, predictive maintenance, fleet & asset intelligence.</li>
-<li><strong>GenAI + IoT fusion</strong> for digital twins, autonomous operations, and data-driven safety systems.</li>
- </ul>
- </article>
-<article class="card ico impact">
-<h3>Proven Impact</h3>
-<ul>
-<li>Reduced operational risk by up to 30% through Gen AI-driven safety intelligence.</li>
-<li>Achieved 25% faster go-to-market timelines using Gen AI-powered automation.</li>
-<li>Delivered 20–35% cost savings in logistics and fleet operations with IoT-based predictive analytics.</li>
-<li>Recognized for providing secure, scalable, and industry-ready solutions.</li>
-</ul>
- </article>
-<article class="card ico why">
-<h3>Why Choose Us</h3>
-<ul>
-<li><strong>Deep industry expertise</strong> across mining, automotive, healthcare, and manufacturing.</li>
-<li><strong>Custom Solutions (Gen AI + IoT platforms tailored to each sector)</strong></li>
-<li>Strong focus on global security & compliance standards <strong>(GDPR-ready)</strong>.</li>
-<li><strong>Innovation-first culture</strong> applying latest GenAI & IoT breakthroughs for real ROI.</li>
- </ul>
- </article>
- </div>
- </div>
-</section>
+    <!-- Solutions Section -->
+    <section id="solutions" class="solutions">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Solutions</span>
+                <h2 class="section-title">Industry-Leading Solutions</h2>
+                <p class="section-description">
+                    Tailored technology solutions designed for your industry's unique challenges and opportunities.
+                </p>
+            </div>
+            <div class="services-grid">
+                <div class="services-carousel" aria-roledescription="carousel">
+                    <button class="carousel-btn prev" aria-label="Previous solution" tabindex="0">‹</button>
+                    <div class="services-track" role="group" aria-live="polite">
+                        <div class="service-card">
+                            <div class="service-icon">🏭</div>
+                            <h3 class="service-title">AI-Driven Asset Management Platform</h3>
+                            <p class="service-description"><strong>Technologies:</strong> Generative AI, IoT, Predictive Analytics</p>
+                            <ul class="service-features">
+                                <li>Monitors asset health, usage, and lifecycle via IoT analytics</li>
+                                <li>Uses Generative AI for predictive maintenance and cost optimization</li>
+                                <li>Real-time dashboards for cross-site visibility and decisions</li>
+                                <li>Automated performance insights and usage recommendations</li>
+                            </ul>
+                            <a href="#contact" class="service-link">Achieves up to 50% downtime reduction →</a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🛡️</div>
+                            <h3 class="service-title">AI Defect Detection & Warranty System</h3>
+                            <p class="service-description"><strong>Technologies:</strong> Computer Vision, Deep Learning, IoT Sensors</p>
+                            <ul class="service-features">
+                                <li>Detects component defects via AI-based image and signal analysis</li>
+                                <li>Automates warranty claim validation with predictive algorithms</li>
+                                <li>Connects mobile apps and IoT sensors for quick fault assessment</li>
+                                <li>Severity-based categorization with real-time decision outputs</li>
+                            </ul>
+                            <a href="#contact" class="service-link">Cuts inspection time by 70% →</a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🚚</div>
+                            <h3 class="service-title">InciMat – Fleet & Asset Intelligence</h3>
+                            <p class="service-description"><strong>Technologies:</strong> IoT, Edge Computing, Cloud Analytics</p>
+                            <ul class="service-features">
+                                <li>24/7 visibility into fleet performance, routes, and fuel usage</li>
+                                <li>Predictive maintenance to forecast and prevent failures</li>
+                                <li>Unified dashboards combining GPS, telematics, and sensors</li>
+                                <li>Driver analytics, alerts, and real-time operational control</li>
+                            </ul>
+                            <a href="#contact" class="service-link">Reduces delays by 40–50% →</a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🚲</div>
+                            <h3 class="service-title">SmartRide Companion – Mobility Platform</h3>
+                            <p class="service-description"><strong>Technologies:</strong> IoT, Bluetooth, AI Analytics</p>
+                            <ul class="service-features">
+                                <li>Real-time tracking, ride summaries, battery diagnostics</li>
+                                <li>Geofencing, anti-theft, and SOS safety alerts</li>
+                                <li>AI-generated performance and efficiency insights</li>
+                                <li>Seamless connectivity with smart e-bikes or scooters</li>
+                            </ul>
+                            <a href="#contact" class="service-link">Boosts safety and engagement →</a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">🏭</div>
+                            <h3 class="service-title">AI Quality Inspection for Manufacturing</h3>
+                            <p class="service-description"><strong>Technologies:</strong> Computer Vision, IoT, AI Analytics</p>
+                            <ul class="service-features">
+                                <li>Automated dimensional and surface inspections with vision</li>
+                                <li>Detects micro-defects, cracks, tolerance deviations</li>
+                                <li>Syncs inspection data with MES/ERP for process control</li>
+                                <li>Reduces inspection time by 30–40% with higher accuracy</li>
+                            </ul>
+                            <a href="#contact" class="service-link">Eliminates manual errors →</a>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-icon">📷</div>
+                            <h3 class="service-title">AI Inspection & Monitoring System</h3>
+                            <p class="service-description"><strong>Technologies:</strong> Computer Vision, IoT, Edge AI</p>
+                            <ul class="service-features">
+                                <li>Automates visual inspections using cameras and sensors</li>
+                                <li>Detects anomalies, misalignments, and defects in real time</li>
+                                <li>Streams data to dashboards for instant analysis and alerts</li>
+                                <li>Scales across sites with cloud and edge integration</li>
+                            </ul>
+                            <a href="#contact" class="service-link">Improves safety and compliance →</a>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" aria-label="Next solution" tabindex="0">›</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="clients" class="clients">
-<div class="container">
-<h2 class="section-title">Trusted by Leading Organizations Across Industries</h2>
-<p class="section-sub">From mining to manufacturing, technology to research, DKG Labs partners with industry leaders to deliver impactful solutions.</p>
-<div class="grid cards-3">
-<article class="card ico mining">
-<h3>Mining & Metals</h3>
-<p>Vedanta, Tata Steel, NMDC, SESA GOA, Aditya Birla , Essel Mining, Northern Coalfields Ltd.</p>
- </article>
-<article class="card ico auto">
-<h3>Automotive & Manufacturing</h3>
-<p>Hero Cycles, Firefox, Maruti Suzuki, Exide, Jitendra EV, Henkel</p>
- </article>
-<article class="card ico infra">
-<h3>Infrastructure & Logistics</h3>
-<p>RITES, GIR Logistics</p>
- </article>
-<article class="card ico tech">
-<h3>Technology & Consulting</h3>
-<p>Wipro, HCL Tech, Tech Mahindra, Gazelle Digitals, Perfect ID India</p>
- </article>
-<article class="card ico research">
-<h3>Research & Institutions</h3>
-<p>Sports Authority of India,IIT Bombay, NSUT, NSIC, IIA, Ministry of Ayush, CCRYN</p>
- </article>
-<article class="card ico defence">
-<h3>Defence & Aerospace</h3>
-<p>Almerio Defence and Aerospace LLP</p>
- </article>
- </div>
- </div>
-</section>
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Testimonials</span>
+                <h2 class="section-title">What Our Clients Say</h2>
+            </div>
+            <div class="testimonials-carousel" aria-roledescription="carousel">
+                <button class="carousel-btn t-prev" aria-label="Previous testimonial">‹</button>
+                <div class="testimonials-track" role="group" aria-live="polite">
+                    <div class="testimonial-card">
+                        <img src="SAI.png" alt="SAI" class="testimonial-logo testimonial-logo--lg">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            “The solution has genuinely made a difference. We’ve seen a noticeable drop in unplanned maintenance and much better asset tracking. The DKG Labs team did an excellent job delivering something that actually works in the real world.”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">TT</div>
+                            <div class="author-info">
+                                <div class="author-name">Tech Team</div>
+                                <div class="author-role">SAI</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="Maruti Suzuki.png" alt="Maruti Suzuki" class="testimonial-logo">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            “The solution has made a real difference in our warranty process. Defect detection is now faster and far more accurate. It’s helped us reduce manual checks, save time, and improve customer satisfaction. Excellent execution by the DKG Labs team.”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">GM</div>
+                            <div class="author-info">
+                                <div class="author-name">General Manager</div>
+                                <div class="author-role">Maruti Suzuki</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <img src="volkswagen.png" alt="Volkswagen" class="testimonial-logo testimonial-logo--lg">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            “The new AI-driven pricing platform has made our costing process far more efficient. It’s intuitive, accurate, and saves significant time for our teams. We can now make quicker pricing decisions with better insights. Excellent work by the DKG Labs development team.”
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">VT</div>
+                            <div class="author-info">
+                                <div class="author-name">Technical Team</div>
+                                <div class="author-role">Volkswagon</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn t-next" aria-label="Next testimonial">›</button>
+            </div>
+        </div>
+    </section>
 
-<section class="cta-mini">
-<div class="container cta-inner">
-<p>Ready to transform your business? Fill the form above and let’s get started!</p>
-<a href="#leadForm" class="button outline" id="backToForm">Get in touch</a>
- </div>
-</section>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Transform Your Business?</h2>
+                <p class="cta-description">
+                    Join hundreds of companies already leveraging our technology solutions to drive growth and innovation.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary btn-large">Schedule Free Consultation</a>
+                </div>
+                <div class="cta-benefits">
+                    <div class="cta-benefit">
+                        <span class="benefit-icon">✓</span>
+                        <span>Free consultation & strategy session</span>
+                    </div>
+                    <div class="cta-benefit">
+                        <span class="benefit-icon">✓</span>
+                        <span>No obligation, 100% confidential</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer class="site-footer" id="footer">
-<div class="container footer-inner">
-<a href="https://www.linkedin.com/company/dkg-labs/" target="_blank" rel="noopener noreferrer" class="footer-link linkedin" aria-label="LinkedIn">
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" role="img" aria-hidden="true"><path fill="currentColor" d="M20.452 20.452h-3.554v-5.569c0-1.328-.025-3.036-1.85-3.036-1.853 0-2.136 1.447-2.136 2.942v5.663H9.548V9.548h3.409v1.49h.047c.475-.9 1.636-1.851 3.368-1.851 3.6 0 4.268 2.371 4.268 5.456v6.809zM5.337 7.433A2.062 2.062 0 1 1 5.338 3.31a2.062 2.062 0 0 1-.001 4.123zM7.114 20.452H3.56V9.548h3.554v10.904zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.226.792 24 1.771 24h20.451C23.2 24 24 23.226 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-</a>
-<span class="divider">|</span>
-<div>© <span id="year"></span> DKG Labs</div>
-<span class="divider">|</span>
-<div class="footer-actions">
-<a href="https://www.dkgrouplabs.com/Contact" target="_blank" rel="noopener noreferrer" class="footer-link">Contact us</a>
-</div>
-</footer>
+    <!-- Contact/Lead Form Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-badge">Get Started</span>
+                    <h2 class="contact-title">Let's Discuss Your Project</h2>
+                    <p class="contact-description">
+                        Fill out the form and our technology experts will contact you within 24 hours to discuss 
+                        how we can help transform your business.
+                    </p>
+                    <div class="contact-benefits">
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✓</span>
+                            <span>Free consultation & strategy session</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✓</span>
+                            <span>Customized solution proposal</span>
+                        </div>
+                        <div class="benefit-item">
+                            <span class="benefit-icon">✓</span>
+                            <span>Response within 24 hours</span>
+                        </div>
+                    </div>
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="detail-icon">📧</div>
+                            <div>
+                                <div class="detail-label">Email</div>
+                                <div class="detail-value"><a href="mailto:mdoffice@dkgrouplabs.com">mdoffice@dkgrouplabs.com</a></div>
+                            </div>
+                        </div>
+                        <div class="contact-detail">
+                            <div class="detail-icon">📞</div>
+                            <div>
+                                <div class="detail-label">Phone</div>
+                                <div class="detail-value"><a href="tel:+919810124321">+91-9810124321</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="leadForm">
+                    <div class="form-header">
+                        <h3>Request a Consultation</h3>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@company.com">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="company">Company Name *</label>
+                            <input type="text" id="company" name="company" required placeholder="Your Company">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 98101 24321">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="interest">I'm interested in *</label>
+                        <select id="interest" name="interest" required>
+                            <option value="">Select a service</option>
+                            <option value="genai">Generative AI</option>
+                            <option value="custom">Custom Solutions/Softwares</option>
+                            <option value="security">Cybersecurity</option>
+                            <option value="software-dev">Software Development</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Tell us about your project</label>
+                        <textarea id="message" name="message" rows="3" placeholder="How can we help transform your business?"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span class="btn-text">Schedule Free Consultation</span>
+                        <span class="btn-loader" style="display: none;">Processing...</span>
+                    </button>
+                    <p class="form-note">By submitting, you agree to our privacy policy and terms of service.</p>
+                </form>
+            </div>
+        </div>
+    </section>
 
-<!-- Footer will be added later -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="https://www.dkgrouplabs.com" target="_blank" rel="noopener noreferrer" class="logo" aria-label="Visit dkgrouplabs.com">
+                        <img src="/Gen-AI/DKG.png" alt="DKG Labs" class="logo-img">
+                    </a>
+                    <p class="footer-description">
+                        Transforming businesses with GenAI, software engineering, and creative tech.
+                        <br>
+                        <a href="https://www.dkgrouplabs.com" target="_blank" rel="noopener noreferrer">dkgrouplabs.com</a>
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">AI / GenAI Solutions</a></li>
+                        <li><a href="#services">IoT & Sensor-Based Systems</a></li>
+                        <li><a href="#services">Custom Software Development</a></li>
+                        <li><a href="#services">IT Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Our Socials</h4>
+                    <ul class="footer-links social-list">
+                        <li>
+                            <a href="https://www.dkgrouplabs.com" target="_blank" rel="noopener noreferrer" class="social-link-row" aria-label="Website">
+                                <!-- Globe (website) original-style mark -->
+                                <svg class="social-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path d="M12 21c4.97 0 9-4.03 9-9s-4.03-9-9-9-9 4.03-9 9 4.03 9 9 9Z" stroke="currentColor" stroke-width="1.5"/>
+                                    <path d="M3 12h18M12 3c2.5 2.5 4 6 4 9s-1.5 6.5-4 9c-2.5-2.5-4-6-4-9s1.5-6.5 4-9Z" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                                <span>Website</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/company/dkg-labs" target="_blank" rel="noopener noreferrer" class="social-link-row" aria-label="LinkedIn">
+                                <!-- LinkedIn original logo -->
+                                <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <path fill="#0A66C2" d="M22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.454C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0Z"/>
+                                    <path fill="#fff" d="M7.059 20.452H3.56V9.035h3.5v11.417Zm-1.75-12.98a2.027 2.027 0 1 1 0-4.055 2.027 2.027 0 0 1 0 4.055ZM20.452 20.452h-3.5v-5.56c0-1.326-.027-3.028-1.846-3.028-1.848 0-2.131 1.443-2.131 2.935v5.653h-3.5V9.035h3.36v1.557h.047c.468-.887 1.61-1.822 3.316-1.822 3.551 0 4.206 2.34 4.206 5.381v6.301Z"/>
+                                </svg>
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/dkglabs/" target="_blank" rel="noopener noreferrer" class="social-link-row" aria-label="Instagram">
+                                <!-- Instagram original gradient simplified to brand mark -->
+                                <svg class="social-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                    <defs>
+                                        <linearGradient id="igGrad" x1="0" y1="0" x2="1" y2="1">
+                                            <stop offset="0%" stop-color="#F58529"/>
+                                            <stop offset="50%" stop-color="#DD2A7B"/>
+                                            <stop offset="100%" stop-color="#8134AF"/>
+                                        </linearGradient>
+                                    </defs>
+                                    <rect x="3" y="3" width="18" height="18" rx="5" fill="url(#igGrad)"/>
+                                    <circle cx="12" cy="12" r="3.5" fill="#fff"/>
+                                    <circle cx="17.2" cy="6.8" r="1.2" fill="#fff"/>
+                                </svg>
+                                <span>Instagram</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact</h4>
+                    <ul class="footer-links">
+                        <li>Email: <a href="mailto:mdoffice@dkgrouplabs.com">mdoffice@dkgrouplabs.com</a></li>
+                        <li>Phone: <a href="tel:+919810124321">+91-9810124321</a></li>
+                    </ul>
+                    <a href="#contact" class="footer-cta">Book a Demo</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 DKG Labs. All rights reserved.</p>
+                <!-- <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div> -->
+            </div>
+        </div>
+    </footer>
 
-<!-- Bottom CTA removed for now -->
-<div class="bottom-cta" role="button" aria-label="Know more about DKG Labs" id="knowMoreBar">
-<div class="container">
-<span class="bar-text">Know more about DKG Labs</span>
- </div>
-</div>
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-icon">✓</div>
+            <h2 class="modal-title">Thank You!</h2>
+            <p class="modal-text">
+                We've received your information. Our technology experts will contact you within 24 hours 
+                to discuss your project.
+            </p>
+            <button class="btn btn-primary" onclick="closeModal()">Close</button>
+        </div>
+    </div>
 
-<script src="/Gen-AI/app.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanta/0.5.24/vanta.net.min.js"></script>
-<script>
-  if (window.VANTA) {
-    VANTA.NET({
-      el: "#vanta-bg",
-      mouseControls: true,
-      touchControls: true,
-      gyroControls: false,
-      minHeight: 200.00,
-      minWidth: 200.00,
-      scale: 1.00,
-      scaleMobile: 1.00,
-      color: 0xffffff,
-      backgroundColor: 0x142e46,
-      points: 16.00,
-      maxDistance: 14.00,
-      spacing: 12.00
-    });
-  }
-</script>
+    <!-- Scroll to Top Button -->
+    <button id="scrollTop" class="scroll-top" aria-label="Scroll to top">
+        ↑
+    </button>
+
+    <script src="/Gen-AI/script.js"></script>
 </body>
 </html>
-
