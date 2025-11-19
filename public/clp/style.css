@@ -201,6 +201,7 @@ section {
   height: 100vh;
   z-index: -1;
   pointer-events: none;
+  filter: blur(0.5px);
 }
 
 /* Default card styling */
@@ -363,10 +364,12 @@ img {
 
 /* Hamburger Menu - Touch-Friendly */
 .hamburger-menu {
+  font-weight: bold;       /* Makes text bold */
+    font-size: 18px;         
   position: fixed;
   top: 16px;
   right: 16px;
-  width: 48px;
+  width: 120px;
   height: 48px;
   background: rgba(15, 15, 35, 0.9);
   border-radius: 12px;
@@ -4244,7 +4247,7 @@ textarea:focus {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
-}
+
 
 /* Print styles */
 @media print {
