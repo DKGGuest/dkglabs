@@ -155,9 +155,14 @@ const Contact2 = () => {
           <div className="space-y-3">
             <h3 className="text-xl font-semibold text-red-600">INDIA</h3>
             <p className="text-gray-300">DKG Labs Pvt. Ltd.</p>
-            <p className="text-lime-400">New Delhi</p>
+             <h3 className="text-xl font-semibold text-green-400">New Delhi</h3>
             <p className="text-blue-400">201C/6, D–21 Corporate Park, New Delhi – 110077</p>
             <p className="text-white">📞 +91-9810805605</p>
+          </div>
+
+          <div className="space-y-3">
+            <h3 className="text-xl font-semibold text-green-400">UAE</h3>
+            <p className="text-white">DKG Labs Pvt. Ltd. , ROS Global, Office No. 16G-01, Hamriya Free Zone, Sharjah, United Arab Emirates PO Box: 52319</p>
           </div>
 
           <div className="space-y-3">
