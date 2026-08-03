@@ -168,7 +168,7 @@ const Contact2 = () => {
           <div className="space-y-3">
             <h3 className="text-xl font-semibold text-green-400">USA</h3>
             <p className="text-white">DKG Labs LLC, 2538 Monroe Ave, Everett WA 98203</p>
-            <p className="text-white">📞 (425) 223–3393</p>
+            <p className="text-white">📞 +1 (425) 244-3665</p>
           </div>
 
           <div className="space-y-2 text-sm">
